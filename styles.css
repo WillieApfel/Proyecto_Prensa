@@ -2,9 +2,18 @@ body{
     background:none;
 }
 
+h2 {
+    color: yellow; 
+    font-family:'Oswald', sans-serif; 
+    margin-left: 30px; 
+}
+button {
+    color: blue; 
 
+
+}
 #advanced-search-form{
-    float: center;    
+    float: left;    
     max-width: 800px;
 }
 
@@ -24,7 +33,7 @@ body{
 
 #advanced-search-form .form-group{
 	margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 15px;
 	width: 110%;
     float:left;
     text-align: left;
