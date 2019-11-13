@@ -15,7 +15,8 @@
                             <h3>Roster</h3>
                         </div>
                         <div class="col-sm-3">
-                            <a href="#ventana0" data-toggle="modal"><button style="margin-left: 430px;" data-toggle="modal" class="btn btn-success">Nuevo</button></a>
+                            <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Nuevo</button></a>
+                            <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" class="btn btn-success">Guardar</button>
                         </div>
                     </div>
                 </div>
