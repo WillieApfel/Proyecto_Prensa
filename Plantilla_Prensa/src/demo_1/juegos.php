@@ -1,7 +1,7 @@
 <?php include('header.php');
 ?>
- 
-    <div class="container" id="advanced-search-form">
+
+  <div class="container" id="advanced-search-form">
         <form>
             <br>
          <div class="form-group">
@@ -14,10 +14,10 @@
             </div>
             <div class="form-group">
                 <label>Noticia de la portada</label>
-                <br>
-                <textarea type="text" class="form-control" id="notice" style="width: 850px; height: 500px"></textarea>
-            </div>
+                 <br>
+                 <textarea class="ckeditor" name="editor"></textarea>
             <div class="form-group">
+                 <br>
                 <label for="">Arbitros</label>
                 <br>
                 <br>
@@ -71,4 +71,6 @@
         <br>
         <br>
    
-
+   
+<?php include('footer.php');
+?>
