@@ -162,13 +162,13 @@ function schedule_mag(){
             $lose=$lose+1;
         }elseif($row_p['visitante']==1 and $row_p['carreras_v']>$row_p['carreras_hc']){
             $res="G ";
-            $con="@";
+            $con="@ ";
             $resultado=$row_p['carreras_v']."-".$row_p['carreras_hc']." ";
             $abrev=$row_p['abrl'];
             $wins=$wins+1;
         }else{
             $res="P ";
-            $con="@";
+            $con="@ ";
             $resultado=$row_p['carreras_v']."-".$row_p['carreras_hc']." ";
             $abrev=$row_p['abrl'];
             $lose=$lose+1;
@@ -198,7 +198,7 @@ function schedule_mag(){
             $con="Vs. ";
             $nom=$row_nop['visita'];
         }else{
-            $con="@";
+            $con="@ ";
             $nom=$row_nop['local'];
         }
         echo"<tr>
