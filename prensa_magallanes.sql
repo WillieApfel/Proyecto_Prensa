@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2019 a las 16:21:17
+-- Tiempo de generación: 13-11-2019 a las 02:09:49
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -45,17 +45,56 @@ CREATE TABLE `calendario_liga` (
 
 INSERT INTO `calendario_liga` (`id`, `fecha`, `home_club`, `visitante`, `carreras_hc`, `carreras_v`, `tipo_temporada`, `temporada`) VALUES
 (1, '2019-11-05', 1, 3, 3, 2, 'TR', '2019-2020'),
-(2, '2019-11-05', 6, 8, 3, 6, 'TR', '2019-2020'),
-(3, '2019-11-05', 4, 2, 5, 3, 'TR', '2019-2020'),
-(4, '2019-11-05', 5, 7, 3, 5, 'TR', '2019-2020'),
-(5, '2019-11-06', 1, 2, 4, 9, 'TR', '2019-2020'),
-(6, '2019-11-06', 5, 7, 13, 4, 'TR', '2019-2020'),
-(7, '2019-11-06', 4, 3, 3, 4, 'TR', '2019-2020'),
-(8, '2019-11-06', 8, 6, 3, 2, 'TR', '2019-2020'),
-(9, '2019-11-07', 6, 1, 8, 3, 'TR', '2019-2020'),
-(10, '2019-11-07', 4, 3, 8, 0, 'TR', '2019-2020'),
-(11, '2019-11-07', 5, 7, 11, 13, 'TR', '2019-2020'),
-(12, '2019-11-07', 8, 2, 4, 6, 'TR', '2019-2020');
+(2, '2019-11-06', 1, 2, 4, 9, 'TR', '2019-2020'),
+(3, '2019-11-07', 6, 1, 8, 3, 'TR', '2019-2020'),
+(4, '2019-11-08', 1, 4, 0, 0, 'TR', '2019-2020'),
+(5, '2019-11-09', 4, 1, 0, 0, 'TR', '2019-2020'),
+(6, '2019-11-10', 1, 2, 0, 0, 'TR', '2019-2020'),
+(7, '2019-11-12', 1, 5, 0, 0, 'TR', '2019-2020'),
+(8, '2019-11-13', 1, 5, 0, 0, 'TR', '2019-2020'),
+(9, '2019-11-14', 1, 6, 0, 0, 'TR', '2019-2020'),
+(10, '2019-11-15', 3, 1, 0, 0, 'TR', '2019-2020'),
+(11, '2019-11-16', 3, 1, 0, 0, 'TR', '2019-2020'),
+(12, '2019-11-17', 3, 1, 0, 0, 'TR', '2019-2020'),
+(13, '2019-11-19', 1, 8, 0, 0, 'TR', '2019-2020'),
+(14, '2019-11-20', 7, 1, 0, 0, 'TR', '2019-2020'),
+(15, '2019-11-21', 1, 7, 0, 0, 'TR', '2019-2020'),
+(16, '2019-11-22', 4, 1, 0, 0, 'TR', '2019-2020'),
+(17, '2019-11-23', 1, 3, 0, 0, 'TR', '2019-2020'),
+(18, '2019-11-24', 1, 2, 0, 0, 'TR', '2019-2020'),
+(19, '2019-11-26', 6, 1, 0, 0, 'TR', '2019-2020'),
+(20, '2019-11-27', 7, 1, 0, 0, 'TR', '2019-2020'),
+(21, '2019-11-28', 1, 6, 0, 0, 'TR', '2019-2020'),
+(22, '2019-11-29', 1, 4, 0, 0, 'TR', '2019-2020'),
+(23, '2019-11-30', 8, 1, 0, 0, 'TR', '2019-2020'),
+(24, '2019-12-01', 6, 1, 0, 0, 'TR', '2019-2020'),
+(25, '2019-12-04', 8, 1, 0, 0, 'TR', '2019-2020'),
+(26, '2019-12-06', 1, 6, 0, 0, 'TR', '2019-2020'),
+(27, '2019-12-07', 5, 1, 0, 0, 'TR', '2019-2020'),
+(28, '2019-12-08', 5, 1, 0, 0, 'TR', '2019-2020'),
+(29, '2019-12-09', 5, 1, 0, 0, 'TR', '2019-2020'),
+(30, '2019-12-11', 1, 8, 0, 0, 'TR', '2019-2020'),
+(31, '2019-12-12', 7, 1, 0, 0, 'TR', '2019-2020'),
+(32, '2019-12-13', 1, 7, 0, 0, 'TR', '2019-2020'),
+(33, '2019-12-14', 2, 1, 0, 0, 'TR', '2019-2020'),
+(34, '2019-12-15', 2, 1, 0, 0, 'TR', '2019-2020'),
+(35, '2019-12-16', 2, 1, 0, 0, 'TR', '2019-2020'),
+(36, '2019-12-18', 1, 3, 0, 0, 'TR', '2019-2020'),
+(37, '2019-12-20', 1, 4, 0, 0, 'TR', '2019-2020'),
+(38, '2019-11-21', 4, 1, 0, 0, 'TR', '2019-2020'),
+(39, '2019-12-22', 1, 8, 0, 0, 'TR', '2019-2020'),
+(40, '2019-12-27', 8, 1, 0, 0, 'TR', '2019-2020'),
+(41, '2019-12-28', 1, 5, 0, 0, 'TR', '2019-2020'),
+(42, '2019-12-29', 1, 7, 0, 0, 'TR', '2019-2020'),
+(43, '2019-11-05', 6, 8, 3, 6, 'TR', '2019-2020'),
+(44, '2019-11-05', 4, 2, 5, 3, 'TR', '2019-2020'),
+(45, '2019-11-05', 5, 7, 3, 5, 'TR', '2019-2020'),
+(46, '2019-11-06', 5, 7, 13, 4, 'TR', '2019-2020'),
+(47, '2019-11-06', 4, 3, 3, 4, 'TR', '2019-2020'),
+(48, '2019-11-06', 8, 6, 3, 2, 'TR', '2019-2020'),
+(49, '2019-11-07', 4, 3, 8, 0, 'TR', '2019-2020'),
+(50, '2019-11-07', 5, 7, 11, 13, 'TR', '2019-2020'),
+(51, '2019-11-07', 8, 2, 4, 6, 'TR', '2019-2020');
 
 -- --------------------------------------------------------
 
@@ -77,8 +116,47 @@ CREATE TABLE `calendario_mag` (
 
 INSERT INTO `calendario_mag` (`id`, `nro_juego`, `tipo_juego`, `tiempo`, `asistencia`) VALUES
 (1, 1, 'L', '3:31', 8342),
-(5, 2, 'L', '4:41', 3515),
-(9, 3, 'V', '3:35', 8244);
+(2, 2, 'L', '4:41', 3515),
+(3, 3, 'V', '3:35', 8244),
+(4, 4, 'L', '', 0),
+(5, 5, 'V', '', 0),
+(6, 6, 'L', '', 0),
+(7, 7, 'L', '', 0),
+(8, 8, 'L', '', 0),
+(9, 9, 'L', '', 0),
+(10, 10, 'V', '', 0),
+(11, 11, 'V', '', 0),
+(12, 12, 'V', '', 0),
+(13, 13, 'L', '', 0),
+(14, 14, 'V', '', 0),
+(15, 15, 'L', '', 0),
+(16, 16, 'V', '', 0),
+(17, 17, 'L', '', 0),
+(18, 18, 'L', '', 0),
+(19, 19, 'V', '', 0),
+(20, 20, 'V', '', 0),
+(21, 21, 'L', '', 0),
+(22, 22, 'L', '', 0),
+(23, 23, 'V', '', 0),
+(24, 24, 'V', '', 0),
+(25, 25, 'V', '', 0),
+(26, 26, 'L', '', 0),
+(27, 27, 'V', '', 0),
+(28, 28, 'V', '', 0),
+(29, 29, 'V', '', 0),
+(30, 30, 'L', '', 0),
+(31, 31, 'V', '', 0),
+(32, 32, 'L', '', 0),
+(33, 33, 'V', '', 0),
+(34, 34, 'V', '', 0),
+(35, 35, 'V', '', 0),
+(36, 36, 'L', '', 0),
+(37, 37, 'L', '', 0),
+(38, 38, 'V', '', 0),
+(39, 39, 'L', '', 0),
+(40, 40, 'V', '', 0),
+(41, 41, 'L', '', 0),
+(42, 42, 'L', '', 0);
 
 -- --------------------------------------------------------
 
@@ -108,6 +186,119 @@ INSERT INTO `equipos` (`id`, `nombrec`, `nombre`, `abreviatura`, `lugar`) VALUES
 (7, 'Tiburones de la Guaira', 'Tiburones', 'TIB', 'Caracas'),
 (8, 'Tigres de Aragua', 'Tigres', 'ARA', 'Maracay');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roster_equipo`
+--
+
+CREATE TABLE `roster_equipo` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `nro` int(3) NOT NULL,
+  `posicion` varchar(3) COLLATE utf8_spanish_ci NOT NULL,
+  `pos_sec` varchar(3) COLLATE utf8_spanish_ci NOT NULL,
+  `bat` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `throw` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `h_feet` int(2) NOT NULL,
+  `h_inches` int(2) NOT NULL,
+  `weight` int(3) NOT NULL,
+  `birthday` date NOT NULL,
+  `birthplace` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `org` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `liga` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `roster_equipo`
+--
+
+INSERT INTO `roster_equipo` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos_sec`, `bat`, `throw`, `h_feet`, `h_inches`, `weight`, `birthday`, `birthplace`, `org`, `liga`) VALUES
+(1, 'Yohan', 'Pino', 30, 'RHP', '', 'R', 'R', 6, 2, 190, '1986-12-26', 'Turmero, Aragua', 'Cacaoteros', 'LNBB'),
+(2, 'Carlos', 'Alvarado', 70, 'RHP', '', 'R', 'R', 6, 4, 175, '1989-10-22', 'Valencia, Carabobo', '-', '-'),
+(3, 'Iván', 'Andueza', 67, 'LHP', '', 'L', 'L', 5, 11, 180, '1995-02-07', 'Barquisimeto, Lara', 'Lanceros', 'LNBB'),
+(4, 'Jhon', 'García', 56, 'RHP', '', 'R', 'R', 6, 2, 200, '1987-05-19', 'Tinaquillo, Cojedes', '-', '-'),
+(5, 'Silfredo', 'García', 61, 'RHP', '', 'R', 'R', 6, 2, 170, '1991-07-19', 'Pto Cabello, Carabobo', '-', '-'),
+(6, 'Eliezer', 'García', 85, 'LHP', '', 'L', 'L', 6, 1, 185, '1984-06-07', 'Bolívar', '-', '-'),
+(7, 'Danny', 'Hernández', 72, 'RHP', '', 'R', 'R', 6, 2, 180, '1985-11-19', 'Valencia, Carabobo', '-', '-'),
+(8, 'Edgar', 'Ibarra', 99, 'LHP', '', 'L', 'L', 6, 0, 190, '1989-05-31', 'Valencia, Carabobo', '-', '-'),
+(9, 'Elis', 'Jiménez', 26, 'RHP', '', 'R', 'R', 6, 2, 195, '1992-06-26', 'Valencia, Carabobo', '-', '-'),
+(10, 'Ronard', 'Machado', 97, 'RHP', '', 'R', 'R', 6, 3, 191, '1998-09-03', 'Boca de Aroa, Falcón', 'Cachorros', 'LNBB'),
+(11, 'Luis', 'Ramírez', 55, 'LHP', '', 'L', 'L', 5, 10, 160, '1995-11-27', 'Caracas, D.C.', '-', '-'),
+(12, 'Jorge', 'Rondón', 44, 'RHP', '', 'R', 'R', 6, 1, 215, '1988-02-16', 'Calabozo, Guárico', 'Musashi', 'BCL'),
+(13, 'Kevin', 'Sosa', 42, 'RHP', '', 'R', 'R', 6, 1, 192, '1995-01-06', 'Acarigua, Portuguesa', '-', '-'),
+(14, 'Josmil', 'Pinto', 36, 'C', '1B', 'R', 'R', 5, 11, 225, '1989-03-31', 'Valencia, Carabobo', '-', '-'),
+(15, 'Arturo', 'Nieto', 63, 'C', '', 'R', 'R', 6, 2, 195, '1992-12-09', 'Maracay, Aragua', 'Miners', 'Frontier League'),
+(16, 'Juan C.', 'Torres', 60, 'C', '1B', 'R', 'R', 6, 1, 180, '1988-10-07', 'Valencia, Carabobo', 'Rojos', 'LNM'),
+(17, 'Manuel', 'Boscán', 54, 'C', '1B', 'S', 'R', 6, 0, 160, '1993-03-10', 'Maracaibo, Zulia', 'Milkmen', 'American Assoc.'),
+(18, 'Ronny', 'Cedeño', 5, 'INF', '', 'R', 'R', 6, 2, 195, '1983-02-02', 'Pto Cabello, Carabobo', '-', '-'),
+(19, 'Héctor', 'García', 24, 'INF', '', 'R', 'R', 6, 2, 210, '1990-03-16', 'Caracas, D.C.', 'Musashi', 'BCL'),
+(20, 'Anthony', 'Pereira', 88, 'INF', '', 'R', 'R', 6, 0, 195, '1996-11-28', 'Tocuyito, Carabobo', '-', '-'),
+(21, 'Jackson', 'Valera', 71, '1B', 'OF', 'R', 'R', 6, 1, 175, '1992-04-08', 'Valencia, Carabobo', 'Shiga', 'BCL'),
+(22, 'Wilfred', 'Vivas', 8, 'UT', '', 'R', 'R', 5, 11, 160, '1989-11-08', 'Maracay, Aragua', '-', '-'),
+(23, 'Wuilmer', 'Becerra', 83, 'OF', '', 'R', 'R', 6, 3, 243, '1994-10-01', 'Caracas, D.C.', '-', '-'),
+(24, 'Diego', 'Cedeño', 43, 'OF', '', 'L', 'L', 5, 11, 160, '1992-05-19', 'Maracay, Aragua', '-', '-'),
+(25, 'Ricardo', 'Marcano', 31, 'OF', 'L', 'L', 'R', 6, 2, 190, '1994-10-18', 'Miranda, Venezuela', 'UCV', 'LNBB'),
+(26, 'Alberth', 'Martínez', 75, 'OF', '', 'R', 'R', 6, 1, 170, '1991-01-23', 'San Félix, Bolívar', 'Aigles', 'Can-Am Assoc'),
+(27, 'Yorman', 'Rodríguez', 86, 'OF', '', 'R', 'R', 6, 3, 210, '1992-08-15', 'Ocumare de la Costa', 'Delfines', 'LIB'),
+(28, 'Manny', 'Acosta', 73, 'RHP', '', 'R', 'R', 6, 4, 215, '1981-05-01', 'Colón, Panama', 'Bravos', 'LMB'),
+(29, 'Eduard', 'Reyes', 9, 'RHP', '', 'R', 'R', 6, 0, 175, '1990-08-23', 'Bonao, R.D.', 'Jackals', 'Can-Am Assoc.'),
+(30, 'Adrián', 'Salcedo', 92, 'RHP', '', 'R', 'R', 6, 4, 200, '1991-02-05', 'Moca, R.D.', 'Baycats', 'IBL'),
+(31, 'Edgar', 'Muñoz', 77, 'INF', '', 'R', 'R', 5, 9, 150, '1991-10-30', 'Cristobal, Panamá', 'Algodoneros', 'LMB'),
+(32, 'Rosa', 'Garabez', 65, 'INF', '', 'R', 'R', 6, 2, 165, '1989-10-12', 'Higüey, R.D.', 'Leones', 'LMB');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roster_week`
+--
+
+CREATE TABLE `roster_week` (
+  `id` int(11) NOT NULL,
+  `jugador` int(11) NOT NULL,
+  `semana_inicio` date NOT NULL,
+  `semana_fin` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `roster_week`
+--
+
+INSERT INTO `roster_week` (`id`, `jugador`, `semana_inicio`, `semana_fin`) VALUES
+(1, 1, '2019-11-11', '2019-11-17'),
+(2, 2, '2019-11-11', '2019-11-17'),
+(3, 3, '2019-11-11', '2019-11-17'),
+(4, 4, '2019-11-11', '2019-11-17'),
+(5, 5, '2019-11-11', '2019-11-17'),
+(6, 6, '2019-11-11', '2019-11-17'),
+(7, 7, '2019-11-11', '2019-11-17'),
+(8, 8, '2019-11-11', '2019-11-17'),
+(9, 9, '2019-11-11', '2019-11-17'),
+(10, 10, '2019-11-11', '2019-11-17'),
+(11, 11, '2019-11-11', '2019-11-17'),
+(12, 12, '2019-11-11', '2019-11-17'),
+(13, 13, '2019-11-11', '2019-11-17'),
+(14, 14, '2019-11-11', '2019-11-17'),
+(15, 15, '2019-11-11', '2019-11-17'),
+(16, 16, '2019-11-11', '2019-11-17'),
+(17, 17, '2019-11-11', '2019-11-17'),
+(18, 18, '2019-11-11', '2019-11-17'),
+(19, 19, '2019-11-11', '2019-11-17'),
+(20, 20, '2019-11-11', '2019-11-17'),
+(21, 21, '2019-11-11', '2019-11-17'),
+(22, 22, '2019-11-11', '2019-11-17'),
+(23, 23, '2019-11-11', '2019-11-17'),
+(24, 24, '2019-11-11', '2019-11-17'),
+(25, 25, '2019-11-11', '2019-11-17'),
+(26, 26, '2019-11-11', '2019-11-17'),
+(27, 27, '2019-11-11', '2019-11-17'),
+(28, 28, '2019-11-11', '2019-11-17'),
+(29, 29, '2019-11-11', '2019-11-17'),
+(30, 30, '2019-11-11', '2019-11-17'),
+(31, 31, '2019-11-11', '2019-11-17'),
+(32, 32, '2019-11-11', '2019-11-17');
+
 --
 -- Índices para tablas volcadas
 --
@@ -133,6 +324,18 @@ ALTER TABLE `equipos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `roster_equipo`
+--
+ALTER TABLE `roster_equipo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `roster_week`
+--
+ALTER TABLE `roster_week`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -140,13 +343,25 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `calendario_liga`
 --
 ALTER TABLE `calendario_liga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `equipos`
 --
 ALTER TABLE `equipos`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `roster_equipo`
+--
+ALTER TABLE `roster_equipo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT de la tabla `roster_week`
+--
+ALTER TABLE `roster_week`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Restricciones para tablas volcadas
@@ -163,7 +378,7 @@ ALTER TABLE `calendario_liga`
 -- Filtros para la tabla `calendario_mag`
 --
 ALTER TABLE `calendario_mag`
-  ADD CONSTRAINT `calendario_mag_ibfk_1` FOREIGN KEY (`id`) REFERENCES `calendario_liga` (`id`);
+  ADD CONSTRAINT `calendario_mag_ibfk_1` FOREIGN KEY (`id`) REFERENCES `calendario_liga` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
