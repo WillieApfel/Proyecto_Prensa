@@ -113,7 +113,7 @@ function defin_cmag(){
 }
 
 
-function week_roster_PROVI(){
+/*function week_roster_PROVI(){
     global $connect;
     
     $sql=mysqli_query($connect,"SELECT roster_equipo.id FROM roster_equipo");
@@ -122,7 +122,7 @@ function week_roster_PROVI(){
         $insert=mysqli_query($connect,"INSERT INTO `roster_week` (`id`, `jugador`, `semana_inicio`, `semana_fin`) VALUES (NULL, '".$row['id']."', '2019-11-11', '2019-11-17')");
     }
     
-}
+}*/
 
 
 function schedule_mag(){
@@ -176,7 +176,7 @@ function schedule_mag(){
         $played=$played+1;
         echo"<tr>
                 <td>".$row_p['nro_juego']."</td>
-                <td>".custom_dateformat($row_p['fecha'])."</td>
+                <td>".custom_dateformat($row_p['fecha'],1)."</td>
                 <td>".$res.$resultado.$con.$abrev."</td>
                 <td>".$row_p['tiempo']."</td>
                 <td>".$wins."G-".$lose."P"."</td>
@@ -194,7 +194,7 @@ function schedule_mag(){
 
    
     while($row_nop=mysqli_fetch_array($sql_nop)){
-        if($row_p['home_club']==1){
+        if($row_nop['home_club']==1){
             $con="Vs. ";
             $nom=$row_nop['visita'];
         }else{
@@ -203,7 +203,7 @@ function schedule_mag(){
         }
         echo"<tr>
                 <td>".$row_nop['nro_juego']."</td>
-                <td>".custom_dateformat($row_nop['fecha'])."</td>
+                <td>".custom_dateformat($row_nop['fecha'],1)."</td>
                 <td>".$con.$nom."</td>
                 <td></td>
                 <td></td>
@@ -212,16 +212,87 @@ function schedule_mag(){
 
     }    
     echo"</table>";
+}
+
+function roster_week(){
+
+    global $connect;
+
+    $posiciones=['P','C','INF','UT','OF'];
+
+    echo"<table border=1>   
+            <tr>
+                <th>N°</th>
+                <th>Nombre</th>
+                <th>Pos.</th>
+                <th>B</th>
+                <th>T</th>
+                <th>H/W</th>
+                <th>Birthday</th>
+                <th>Birthplace</th>
+                <th>Org.</th>
+                <th>League</th>
+            </tr>";
+
+    foreach($posiciones as $posicion){
+        if($posicion=='P'){
+
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
+                ON rw.jugador=re.id WHERE re.posicion='RHP' OR re.posicion='LHP' ORDER BY re.apellido");
+        }elseif($posicion=='INF'){
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
+                ON rw.jugador=re.id WHERE re.posicion='1B' OR re.posicion='2B' OR re.posicion='3B' 
+                OR re.posicion='SS' OR re.posicion='INF' ORDER BY re.apellido");
+        }elseif($posicion=='OF'){
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
+                ON rw.jugador=re.id WHERE re.posicion='LF' OR re.posicion='CF' OR re.posicion='RF' 
+                OR re.posicion='OF' ORDER BY re.apellido");
+        }else{
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
+                ON rw.jugador=re.id WHERE re.posicion='".$posicion."' ORDER BY re.apellido");
+        }
+
+        while($row=mysqli_fetch_array($sql)){
+            if($row['pos_sec']==""){
+                $posicion = $row['posicion'];
+            }else{
+                $posicion = $row['posicion']."/".$row['pos_sec'];
+            }
+            echo"<tr>
+                    <td>".$row['nro']."</td>
+                    <td>".$row['apellido'].", ".$row['nombre']."</td>
+                    <td>".$posicion."</td>
+                    <td>".$row['bat']."</td>
+                    <td>".$row['throw']."</td>
+                    <td>".$row['h_feet']."'".$row['h_inches'].'"/'.$row['w_lbs']."</td>
+                    <td>".custom_dateformat($row['birthday'],2)."</td>
+                    <td>".$row['birthplace']."</td>
+                    <td>".$row['org']."</td>
+                    <td>".$row['liga']."</td>
+                </tr>";
+    
+        }   
+
+    }
+    echo"</table>";
 
 }
 
-function custom_dateformat($item){
+
+function custom_dateformat($item,$referencia){
+    
     $new = explode('-',$item);
-    return $new[2]."/".$new[1];
+    if($referencia==1){
+        $retorno=$new[2]."/".$new[1];
+    }elseif($referencia==2){
+        $retorno=$new[2]."/".$new[1]."/".$new[0];
+    }
+    return $retorno;
 }
 
 gameday();
 tabla();
 lastdaygame();
 schedule_mag();
+roster_week();
 ?>

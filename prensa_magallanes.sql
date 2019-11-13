@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-11-2019 a las 02:09:49
+-- Tiempo de generación: 13-11-2019 a las 06:15:29
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -203,7 +203,7 @@ CREATE TABLE `roster_equipo` (
   `throw` char(1) COLLATE utf8_spanish_ci NOT NULL,
   `h_feet` int(2) NOT NULL,
   `h_inches` int(2) NOT NULL,
-  `weight` int(3) NOT NULL,
+  `w_lbs` int(3) NOT NULL,
   `birthday` date NOT NULL,
   `birthplace` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `org` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
@@ -214,7 +214,7 @@ CREATE TABLE `roster_equipo` (
 -- Volcado de datos para la tabla `roster_equipo`
 --
 
-INSERT INTO `roster_equipo` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos_sec`, `bat`, `throw`, `h_feet`, `h_inches`, `weight`, `birthday`, `birthplace`, `org`, `liga`) VALUES
+INSERT INTO `roster_equipo` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos_sec`, `bat`, `throw`, `h_feet`, `h_inches`, `w_lbs`, `birthday`, `birthplace`, `org`, `liga`) VALUES
 (1, 'Yohan', 'Pino', 30, 'RHP', '', 'R', 'R', 6, 2, 190, '1986-12-26', 'Turmero, Aragua', 'Cacaoteros', 'LNBB'),
 (2, 'Carlos', 'Alvarado', 70, 'RHP', '', 'R', 'R', 6, 4, 175, '1989-10-22', 'Valencia, Carabobo', '-', '-'),
 (3, 'Iván', 'Andueza', 67, 'LHP', '', 'L', 'L', 5, 11, 180, '1995-02-07', 'Barquisimeto, Lara', 'Lanceros', 'LNBB'),
@@ -239,7 +239,7 @@ INSERT INTO `roster_equipo` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos
 (22, 'Wilfred', 'Vivas', 8, 'UT', '', 'R', 'R', 5, 11, 160, '1989-11-08', 'Maracay, Aragua', '-', '-'),
 (23, 'Wuilmer', 'Becerra', 83, 'OF', '', 'R', 'R', 6, 3, 243, '1994-10-01', 'Caracas, D.C.', '-', '-'),
 (24, 'Diego', 'Cedeño', 43, 'OF', '', 'L', 'L', 5, 11, 160, '1992-05-19', 'Maracay, Aragua', '-', '-'),
-(25, 'Ricardo', 'Marcano', 31, 'OF', 'L', 'L', 'R', 6, 2, 190, '1994-10-18', 'Miranda, Venezuela', 'UCV', 'LNBB'),
+(25, 'Ricardo', 'Marcano', 31, 'OF', '', 'L', 'R', 6, 2, 190, '1994-10-18', 'Miranda, Venezuela', 'UCV', 'LNBB'),
 (26, 'Alberth', 'Martínez', 75, 'OF', '', 'R', 'R', 6, 1, 170, '1991-01-23', 'San Félix, Bolívar', 'Aigles', 'Can-Am Assoc'),
 (27, 'Yorman', 'Rodríguez', 86, 'OF', '', 'R', 'R', 6, 3, 210, '1992-08-15', 'Ocumare de la Costa', 'Delfines', 'LIB'),
 (28, 'Manny', 'Acosta', 73, 'RHP', '', 'R', 'R', 6, 4, 215, '1981-05-01', 'Colón, Panama', 'Bravos', 'LMB'),
