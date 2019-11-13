@@ -25,9 +25,9 @@
               <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title mb-0">Resultados anteriores </h4>
+                    <h4 class="card-title mb-0">Historial estadistico de la temporada</h4>
                     <div class="d-flex flex-column flex-lg-row">
-                      <p>Asistencia de los ultimos juegos de los Navegantes del Magallanes </p>
+                      <p>Navegantes del Magallanes BBC</p>
                       <ul class="nav nav-tabs sales-mini-tabs ml-lg-auto mb-4 mb-md-0" role="tablist">
                         <li class="nav-item">
                           <a class="nav-link active" id="sales-statistics_switch_1" data-toggle="tab" role="tab" aria-selected="true">S1</a>
@@ -49,14 +49,12 @@
                           <h5 class="mb-0">Victorias</h5>
                           <div class="d-flex align-items-center">
                             <h4 class="font-weight-semibold mb-0">2</h4>
-                            <small class="ml-2 text-gray d-none d-lg-block"><b>89.5%</b> of 20,000 Total</small>
-                          </div>
+                            </div>
                         </div>
                         <div class="wrapper">
                           <h5 class="mb-0">Derrotas</h5>
                           <div class="d-flex align-items-center">
-                            <h4 class="font-weight-semibold mb-0">3</h4>
-                            <small class="ml-2 text-gray d-none d-lg-block"><b>10.5%</b> of 20,000 Total</small>
+                            <h4 class="font-weight-semibold mb-0">4</h4>
                           </div>
                         </div>
                       </div>
@@ -70,9 +68,10 @@
                 <div class="card">
                   <div class="card-body d-flex flex-column">
                     <div class="wrapper">
-                      <h4 class="card-title mb-0">Net Profit Margin</h4>
-                      <p>Started collecting data from February 2019</p>
-                      <div class="mb-4" id="net-profit-legend"></div>
+                      <h4 class="card-title mb-0">Gráfica Estadistica</h4>
+                      <p>Comienzo de temporada hasta hoy</p>
+                        
+                      <div class="mb-4" id="net-profit-legend"></div> 
                     </div>
                     <canvas class="my-auto mx-auto" height="250" id="net-profit"></canvas>
                   </div>
@@ -92,9 +91,8 @@
                       <div class="card-body">
                         <div class="d-flex justify-content-between">
                           <h4 class="card-title mb-0">Roster</h4>
-                          <a href="#"><small>Show All</small></a>
+                          <a href="#"><small>Todos los jugadores</small></a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod cupiditate esse fuga</p>
                         <div class="table-responsive">
                           <table class="table table-striped table-hover">
                             <thead>
@@ -156,20 +154,20 @@
                   <div class="col-md-12 grid-margin">
                     <div class="card">
                       <div class="card-body">
-                        <h1 class="card-title mb-4">Website Audience Metrics</h1>
+                        <h1 class="card-title mb-4">Promedio de asistencia por juego</h1>
                         <div class="row">
                           <div class="col-5 col-md-5">
                             <div class="wrapper border-bottom mb-2 pb-2">
-                              <h4 class="font-weight-semibold mb-0">523,200</h4>
+                              <h4 class="font-weight-semibold mb-0">4,532</h4>
                               <div class="d-flex align-items-center">
-                                <p class="mb-0">Page Views</p>
+                                <p class="mb-0">Promedio de la temporada</p>
                                 <div class="dot-indicator bg-secondary ml-auto"></div>
                               </div>
                             </div>
                             <div class="wrapper">
-                              <h4 class="font-weight-semibold mb-0">753,098</h4>
+                              <h4 class="font-weight-semibold mb-0">1,674</h4>
                               <div class="d-flex align-items-center">
-                                <p class="mb-0">Bounce Rate</p>
+                                <p class="mb-0">Promedio por juego</p>
                                 <div class="dot-indicator bg-primary ml-auto"></div>
                               </div>
                             </div>
@@ -183,13 +181,9 @@
                         <div class="row mt-5">
                           <div class="col-6">
                             <div class="d-flex align-items-center mb-2">
-                              <div class="icon-holder bg-primary text-white py-1 px-3 rounded mr-2">
-                                <i class="icon ion-logo-buffer icon-sm"></i>
-                              </div>
                               <h2 class="font-weight-semibold mb-0">3,605</h2>
                             </div>
-                            <p>Since last week</p>
-                            <p><span class="font-weight-medium">0.51%</span> (30 days)</p>
+                            <p>Asistencia de la semana pasada</p>
                           </div>
                           <div class="col-6">
                             <div class="mt-n3 ml-auto" id="dashboard-guage-chart"></div>
@@ -203,13 +197,7 @@
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
-          
-          <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
-    </div>
+   
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
@@ -224,5 +212,3 @@
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/dashboard.js"></script>
     <!-- End custom js for this page-->
-  </body>
-</html>

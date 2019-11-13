@@ -44,10 +44,10 @@
           <ul class="navbar-nav ml-auto">
            <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>
+                 <!-- <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>  --> Cuenta 
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
-                  <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">
+                 <!-- <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">  -->
                   <p class="mb-1 mt-3 font-weight-semibold">Juan Zabala</p>
                   <p class="font-weight-light text-muted mb-0">juanpablozabala21@gmail.com</p>
                 </div>
@@ -90,17 +90,17 @@
                   <li class="nav-item">
                     <a class="nav-link" href="roster.php">Roster</a>
                   </li>
-                  <li class="nav-item">
+                 <!-- <li class="nav-item">
                     <a class="nav-link" href="duelop.php">Duelo de abridores</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a class="nav-link" href="generar.php">Generar</a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+             <li class="nav-item">
+           <!--   <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <i class="menu-icon typcn typcn-document-add"></i>
                 <span class="menu-title">User Pages</span>
                 <i class="menu-arrow"></i>
@@ -123,11 +123,11 @@
                     <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
                   </li>
                 </ul>
-              </div>
+              </div>  -->
             </li>
           </ul>
-        </nav>
-        <!-- partial -->
+        </nav> 
+       <!--  partial -->
         <div class="main-panel">
           <div class="content-wrapper">
             <!-- Page Title Header Starts-->
