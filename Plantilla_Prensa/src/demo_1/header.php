@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.addons.css">
     <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
+    <!-- plugin ckeditor for this page -->
+    <script src="ckeditor/ckeditor.js"></script>
     <!-- inject:css -->
     <link rel="stylesheet" href="../assets/css/shared/style.css">
     <!-- endinject -->
@@ -68,7 +68,6 @@
              <br>
              <br>
         <ul class="nav">
-             
             <li class="nav-item nav-category">Menu</li>
             <li class="nav-item">
               <a class="nav-link" href="inicio.php">
@@ -85,14 +84,14 @@
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="juegos.php">Juegos</a>
+                    <a class="nav-link" href="juegos.php">Noticias</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="roster.php">Roster</a>
                   </li>
-                 <!-- <li class="nav-item">
-                    <a class="nav-link" href="duelop.php">Duelo de abridores</a>
-                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="resultados.php">Resultados</a>
+                  </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="generar.php">Generar</a>
                   </li>

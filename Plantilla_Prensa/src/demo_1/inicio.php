@@ -48,7 +48,7 @@
                         <div class="wrapper pr-5">
                           <h5 class="mb-0">Victorias</h5>
                           <div class="d-flex align-items-center">
-                            <h4 class="font-weight-semibold mb-0">2</h4>
+                            <h4 class="font-weight-semibold mb-0">3</h4>
                             </div>
                         </div>
                         <div class="wrapper">
@@ -195,20 +195,6 @@
               </div>
             </div>
           </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-   
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
-    <script src="../assets/vendors/js/vendor.bundle.addons.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page-->
-    <!-- End plugin js for this page-->
-    <!-- inject:js -->
-    <script src="../assets/js/shared/off-canvas.js"></script>
-    <script src="../assets/js/shared/misc.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="../assets/js/demo_1/dashboard.js"></script>
-    <!-- End custom js for this page-->
+
+<?php include('footer.php');
+?>
