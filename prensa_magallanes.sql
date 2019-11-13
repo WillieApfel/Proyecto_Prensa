@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-11-2019 a las 06:15:29
+-- Tiempo de generación: 13-11-2019 a las 17:44:16
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -189,6 +189,68 @@ INSERT INTO `equipos` (`id`, `nombrec`, `nombre`, `abreviatura`, `lugar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `roster`
+--
+
+CREATE TABLE `roster` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `nro` int(3) NOT NULL,
+  `posicion` varchar(3) COLLATE utf8_spanish_ci NOT NULL,
+  `pos_sec` varchar(3) COLLATE utf8_spanish_ci NOT NULL,
+  `bat` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `throw` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `h_feet` int(2) NOT NULL,
+  `h_inches` int(2) NOT NULL,
+  `w_lbs` int(3) NOT NULL,
+  `birthday` date NOT NULL,
+  `birthplace` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `org` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `liga` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `roster`
+--
+
+INSERT INTO `roster` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos_sec`, `bat`, `throw`, `h_feet`, `h_inches`, `w_lbs`, `birthday`, `birthplace`, `org`, `liga`) VALUES
+(1, 'Yohan', 'Pino', 30, 'RHP', '', 'R', 'R', 6, 2, 190, '1986-12-26', 'Turmero, Aragua', 'Cacaoteros', 'LNBB'),
+(2, 'Carlos', 'Alvarado', 70, 'RHP', '', 'R', 'R', 6, 4, 175, '1989-10-22', 'Valencia, Carabobo', '-', '-'),
+(3, 'Iván', 'Andueza', 67, 'LHP', '', 'L', 'L', 5, 11, 180, '1995-02-07', 'Barquisimeto, Lara', 'Lanceros', 'LNBB'),
+(4, 'Jhon', 'García', 56, 'RHP', '', 'R', 'R', 6, 2, 200, '1987-05-19', 'Tinaquillo, Cojedes', '-', '-'),
+(5, 'Silfredo', 'García', 61, 'RHP', '', 'R', 'R', 6, 2, 170, '1991-07-19', 'Pto Cabello, Carabobo', '-', '-'),
+(6, 'Eliezer', 'García', 85, 'LHP', '', 'L', 'L', 6, 1, 185, '1984-06-07', 'Bolívar', '-', '-'),
+(7, 'Danny', 'Hernández', 72, 'RHP', '', 'R', 'R', 6, 2, 180, '1985-11-19', 'Valencia, Carabobo', '-', '-'),
+(8, 'Edgar', 'Ibarra', 99, 'LHP', '', 'L', 'L', 6, 0, 190, '1989-05-31', 'Valencia, Carabobo', '-', '-'),
+(9, 'Elis', 'Jiménez', 26, 'RHP', '', 'R', 'R', 6, 2, 195, '1992-06-26', 'Valencia, Carabobo', '-', '-'),
+(10, 'Ronard', 'Machado', 97, 'RHP', '', 'R', 'R', 6, 3, 191, '1998-09-03', 'Boca de Aroa, Falcón', 'Cachorros', 'LNBB'),
+(11, 'Luis', 'Ramírez', 55, 'LHP', '', 'L', 'L', 5, 10, 160, '1995-11-27', 'Caracas, D.C.', '-', '-'),
+(12, 'Jorge', 'Rondón', 44, 'RHP', '', 'R', 'R', 6, 1, 215, '1988-02-16', 'Calabozo, Guárico', 'Musashi', 'BCL'),
+(13, 'Kevin', 'Sosa', 42, 'RHP', '', 'R', 'R', 6, 1, 192, '1995-01-06', 'Acarigua, Portuguesa', '-', '-'),
+(14, 'Josmil', 'Pinto', 36, 'C', '1B', 'R', 'R', 5, 11, 225, '1989-03-31', 'Valencia, Carabobo', '-', '-'),
+(15, 'Arturo', 'Nieto', 63, 'C', '', 'R', 'R', 6, 2, 195, '1992-12-09', 'Maracay, Aragua', 'Miners', 'Frontier League'),
+(16, 'Juan C.', 'Torres', 60, 'C', '1B', 'R', 'R', 6, 1, 180, '1988-10-07', 'Valencia, Carabobo', 'Rojos', 'LNM'),
+(17, 'Manuel', 'Boscán', 54, 'C', '1B', 'S', 'R', 6, 0, 160, '1993-03-10', 'Maracaibo, Zulia', 'Milkmen', 'American Assoc.'),
+(18, 'Ronny', 'Cedeño', 5, 'INF', '', 'R', 'R', 6, 2, 195, '1983-02-02', 'Pto Cabello, Carabobo', '-', '-'),
+(19, 'Héctor', 'García', 24, 'INF', '', 'R', 'R', 6, 2, 210, '1990-03-16', 'Caracas, D.C.', 'Musashi', 'BCL'),
+(20, 'Anthony', 'Pereira', 88, 'INF', '', 'R', 'R', 6, 0, 195, '1996-11-28', 'Tocuyito, Carabobo', '-', '-'),
+(21, 'Jackson', 'Valera', 71, '1B', 'OF', 'R', 'R', 6, 1, 175, '1992-04-08', 'Valencia, Carabobo', 'Shiga', 'BCL'),
+(22, 'Wilfred', 'Vivas', 8, 'UT', '', 'R', 'R', 5, 11, 160, '1989-11-08', 'Maracay, Aragua', '-', '-'),
+(23, 'Wuilmer', 'Becerra', 83, 'OF', '', 'R', 'R', 6, 3, 243, '1994-10-01', 'Caracas, D.C.', '-', '-'),
+(24, 'Diego', 'Cedeño', 43, 'OF', '', 'L', 'L', 5, 11, 160, '1992-05-19', 'Maracay, Aragua', '-', '-'),
+(25, 'Ricardo', 'Marcano', 31, 'OF', '', 'L', 'R', 6, 2, 190, '1994-10-18', 'Miranda, Venezuela', 'UCV', 'LNBB'),
+(26, 'Alberth', 'Martínez', 75, 'OF', '', 'R', 'R', 6, 1, 170, '1991-01-23', 'San Félix, Bolívar', 'Aigles', 'Can-Am Assoc'),
+(27, 'Yorman', 'Rodríguez', 86, 'OF', '', 'R', 'R', 6, 3, 210, '1992-08-15', 'Ocumare de la Costa', 'Delfines', 'LIB'),
+(28, 'Manny', 'Acosta', 73, 'RHP', '', 'R', 'R', 6, 4, 215, '1981-05-01', 'Colón, Panama', 'Bravos', 'LMB'),
+(29, 'Eduard', 'Reyes', 9, 'RHP', '', 'R', 'R', 6, 0, 175, '1990-08-23', 'Bonao, R.D.', 'Jackals', 'Can-Am Assoc.'),
+(30, 'Adrián', 'Salcedo', 92, 'RHP', '', 'R', 'R', 6, 4, 200, '1991-02-05', 'Moca, R.D.', 'Baycats', 'IBL'),
+(31, 'Edgar', 'Muñoz', 77, 'INF', '', 'R', 'R', 5, 9, 150, '1991-10-30', 'Cristobal, Panamá', 'Algodoneros', 'LMB'),
+(32, 'Rosa', 'Garabez', 65, 'INF', '', 'R', 'R', 6, 2, 165, '1989-10-12', 'Higüey, R.D.', 'Leones', 'LMB');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `roster_equipo`
 --
 
@@ -324,6 +386,12 @@ ALTER TABLE `equipos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `roster`
+--
+ALTER TABLE `roster`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `roster_equipo`
 --
 ALTER TABLE `roster_equipo`
@@ -350,6 +418,12 @@ ALTER TABLE `calendario_liga`
 --
 ALTER TABLE `equipos`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `roster`
+--
+ALTER TABLE `roster`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `roster_equipo`
@@ -379,6 +453,12 @@ ALTER TABLE `calendario_liga`
 --
 ALTER TABLE `calendario_mag`
   ADD CONSTRAINT `calendario_mag_ibfk_1` FOREIGN KEY (`id`) REFERENCES `calendario_liga` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `roster_week`
+--
+ALTER TABLE `roster_week`
+  ADD CONSTRAINT `roster_week_ibfk_1` FOREIGN KEY (`id`) REFERENCES `roster` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -237,19 +237,19 @@ function roster_week(){
     foreach($posiciones as $posicion){
         if($posicion=='P'){
 
-            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
-                ON rw.jugador=re.id WHERE re.posicion='RHP' OR re.posicion='LHP' ORDER BY re.apellido");
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster r 
+                ON rw.jugador=r.id WHERE r.posicion='RHP' OR r.posicion='LHP' ORDER BY r.apellido");
         }elseif($posicion=='INF'){
-            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
-                ON rw.jugador=re.id WHERE re.posicion='1B' OR re.posicion='2B' OR re.posicion='3B' 
-                OR re.posicion='SS' OR re.posicion='INF' ORDER BY re.apellido");
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster r
+                ON rw.jugador=r.id WHERE r.posicion='1B' OR r.posicion='2B' OR r.posicion='3B' 
+                OR r.posicion='SS' OR r.posicion='INF' ORDER BY r.apellido");
         }elseif($posicion=='OF'){
-            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
-                ON rw.jugador=re.id WHERE re.posicion='LF' OR re.posicion='CF' OR re.posicion='RF' 
-                OR re.posicion='OF' ORDER BY re.apellido");
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster r
+                ON rw.jugador=r.id WHERE r.posicion='LF' OR r.posicion='CF' OR r.posicion='RF' 
+                OR r.posicion='OF' ORDER BY r.apellido");
         }else{
-            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster_equipo re 
-                ON rw.jugador=re.id WHERE re.posicion='".$posicion."' ORDER BY re.apellido");
+            $sql=mysqli_query($connect,"SELECT * FROM roster_week rw INNER JOIN roster r
+                ON rw.jugador=r.id WHERE r.posicion='".$posicion."' ORDER BY r.apellido");
         }
 
         while($row=mysqli_fetch_array($sql)){
