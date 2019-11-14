@@ -70,7 +70,7 @@
                         <div class="wrapper pr-5">
                           <h5 class="mb-0">Victorias</h5>
                           <div class="d-flex align-items-center">
-                            <h4 class="font-weight-semibold mb-0">3</h4>
+                            <h4 class="font-weight-semibold mb-0">4</h4>
                             </div>
                         </div>
                         <div class="wrapper">

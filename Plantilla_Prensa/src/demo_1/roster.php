@@ -8,22 +8,10 @@
                 <div class="page-header">
                   <h4 class="page-title">Roster</h4>
                   <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
-                    <ul class="quick-links">
-                      <li><a href="#">Estadisticas</a></li>
-                      <li><a href="#">Juegos</a></li>
-                      <li><a href="#">Asistencia de los juegos</a></li>
-                    </ul>
-                    <ul class="quick-links ml-auto">
-                      <li><a href="#">Opciones</a></li>
-                      <li><a href="#">Analisis</a></li>
-                      <li><a href="#">Vista</a></li>
-                    </ul>
                   </div>
                 </div>
               </div>
             </div> 
-              
-
 <script src="main.js"></script>
 <div id="content">
     <div class="panel box-shadow-none content-header">
@@ -36,14 +24,8 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-sm-6">
-<<<<<<< HEAD
-                            <h3>Roster</h3>
-                        </div>
-                        <div class="col-sm-3">
-=======
                             </div>
                           <div class="col-sm-3">
->>>>>>> 0dcce1b8515d8c720a32c3bfc71fd504e7dee939
                             <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Nuevo</button></a>
                             <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" class="btn btn-success">Guardar</button>
                         </div>
@@ -146,14 +128,14 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="date">Día de nacimiento:</label>
-                                <input type="date" name="firma" id="firma" class="form-control" placeholder="Año de Firma">
+                                <input type="date" name="firma" id="firma" class="form-control">
                             </div>
                         </div>
                     </div>
                      <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="apellido">Lugar de nacimiento:</label>
-                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" required>
+                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ciudad y Pais" required>
                             </div>
                         </div>
                     <div class="row">
@@ -200,41 +182,32 @@
                         </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="equipos">Org:</label>
-                                <select name="id_equipo" id="id_equipo" required>
-                                    <?php
-									$sql = "SELECT * FROM equipo";
-									$result = mysqli_query($conn, $sql);
-									if ($result) {
-										while ($row = mysqli_fetch_assoc($result)) {
-											echo '<option value="' . $row[id] . '">' . $row[nombre] . '</option>';
-										}
-									}
-									?>
-                                </select>
+
+
+                           <div class="row">
+                        <div class="col-sm-4">
+                             <div class="form-group">
+                                <label for="nombre">Organización:</label>
+                                <input type="text" name="org" id="org" class="form-control" placeholder="Nombre" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                                <label for="equipos">Liga:</label>
-                                <select name="id_equipo" id="id_equipo" required>
-                                    <?php
-									$sql = "SELECT * FROM equipo";
-									$result = mysqli_query($conn, $sql);
-									if ($result) {
-										while ($row = mysqli_fetch_assoc($result)) {
-											echo '<option value="' . $row[id] . '">' . $row[nombre] . '</option>';
-										}
-									}
-									?>
-                                </select>
+                                <label for="nombre">Liga:</label>
+                                 <br>
+                                <input style="width: 140px "type="text" name="lig" id="lig" class="form-control" placeholder="Nombre" required>
                             </div>
                         </div>
                 <!--Footer del modal-->
                 <div class="modal-footer">
-                    <button name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok"><span>Agregar</button>
+<<<<<<< HEAD
+                    <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
+                    
+                    <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+=======
+                     <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
                     <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+>>>>>>> e2b1569b64ed0c9a315079f02f5d8533db0810cd
                          </div>
                       </form>
                     </div>

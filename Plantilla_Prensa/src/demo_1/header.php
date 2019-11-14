@@ -37,7 +37,8 @@ include 'connect.php';
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
           <ul class="navbar-nav">
-         </ul>
+            
+          </ul>
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <div class="form-group">
             </div>
@@ -45,7 +46,7 @@ include 'connect.php';
           <ul class="navbar-nav ml-auto">
            <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                 <!-- <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>  --> }}
+                 <!-- <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>  --> Cuenta 
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                  <!-- <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">  -->
