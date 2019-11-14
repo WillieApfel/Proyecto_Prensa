@@ -1,3 +1,6 @@
+<?php
+include 'connect.php';
+?>
 <html lang="es">
   <head>
     <!-- Required meta tags -->
@@ -92,6 +95,29 @@
                   </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="generar.php">Generar</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Partidos</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Calendario Magallanes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Calendario LVBP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resultados.php">Resultados Magallanes</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="partidoslvbp.php">Resultados LVBP</a>
                   </li>
                 </ul>
               </div>
