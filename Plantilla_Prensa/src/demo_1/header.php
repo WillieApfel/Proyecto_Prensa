@@ -37,7 +37,6 @@
          </ul>
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <div class="form-group">
-              <input type="search" class="form-control" placeholder="Search Here">
             </div>
           </form>
           <ul class="navbar-nav ml-auto">
@@ -47,8 +46,8 @@
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                  <!-- <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">  -->
-                  <p class="mb-1 mt-3 font-weight-semibold">Juan Zabala</p>
-                  <p class="font-weight-light text-muted mb-0">juanpablozabala21@gmail.com</p>
+                  <p class="mb-1 mt-3 font-weight-semibold">Nombre</p>
+                  <p class="font-weight-light text-muted mb-0">Correo</p>
                 </div>
                 <a class="dropdown-item">Mi perfil <span class="badge badge-pill badge-danger"></span><i class="dropdown-item-icon ti-dashboard"></i></a>
                 <a class="dropdown-item">Cerrar sesión<i class="dropdown-item-icon ti-power-off"></i></a>
