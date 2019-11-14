@@ -200,40 +200,23 @@
                         </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="equipos">Org:</label>
-                                <select name="id_equipo" id="id_equipo" required>
-                                    <?php
-									$sql = "SELECT * FROM equipo";
-									$result = mysqli_query($conn, $sql);
-									if ($result) {
-										while ($row = mysqli_fetch_assoc($result)) {
-											echo '<option value="' . $row[id] . '">' . $row[nombre] . '</option>';
-										}
-									}
-									?>
-                                </select>
+                           <div class="row">
+                        <div class="col-sm-4">
+                             <div class="form-group">
+                                <label for="nombre">Organización:</label>
+                                <input type="text" name="org" id="org" class="form-control" placeholder="Nombre" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                                <label for="equipos">Liga:</label>
-                                <select name="id_equipo" id="id_equipo" required>
-                                    <?php
-									$sql = "SELECT * FROM equipo";
-									$result = mysqli_query($conn, $sql);
-									if ($result) {
-										while ($row = mysqli_fetch_assoc($result)) {
-											echo '<option value="' . $row[id] . '">' . $row[nombre] . '</option>';
-										}
-									}
-									?>
-                                </select>
+                                <label for="nombre">Liga:</label>
+                                 <br>
+                                <input style="width: 140px "type="text" name="lig" id="lig" class="form-control" placeholder="Nombre" required>
                             </div>
                         </div>
                 <!--Footer del modal-->
                 <div class="modal-footer">
-                    <button name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok"><span>Agregar</button>
+                     <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
                     <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
                          </div>
                       </form>
