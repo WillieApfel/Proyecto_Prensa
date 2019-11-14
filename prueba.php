@@ -370,6 +370,15 @@ function umpire(){
     
 }
 
+function membrete(){
+    global $connect;
+    $sql = mysqli_query($connect, "SELECT * FROM `trofeos`");
+    $row=mysqli_fetch_array($sql);
+    echo $row['lvbp']." títulos de la LVBP, ".$row['caribe']." Series del Caribe";
+
+
+}
+
 
 function custom_dateformat($item,$referencia){
     
@@ -382,6 +391,7 @@ function custom_dateformat($item,$referencia){
     return $retorno;
 }
 
+membrete();
 gameday();
 tabla();
 lastdaygame();

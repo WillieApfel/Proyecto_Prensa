@@ -35,7 +35,7 @@ function tabla(){
     $sql = mysqli_query($connect, "SELECT e.id, e.nombre FROM equipos e WHERE e.id BETWEEN 1 AND 8");
     $c=0;
 
-    echo "<h3>Tabla:</h3>";
+   
 
     echo    "<table>
                 <tr>
@@ -317,6 +317,14 @@ function umpire(){
         <p class="mayus">2B: '.$row['segunda'].'</p>
         <p class="mayus">3B: '.$row['tercera'].'</p>
         <p class="mayus">RV: '.$row['rv'].'</p>';    
+}
+
+function membrete(){
+    global $connect;
+    $sql = mysqli_query($connect, "SELECT * FROM `trofeos`");
+    $row=mysqli_fetch_array($sql);
+    echo "<h3>".$row['lvbp']." títulos de la LVBP, ".$row['caribe']." Series del Caribe</h3>";
+
 }
 
 

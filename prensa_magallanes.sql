@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2019 a las 08:03:36
+-- Tiempo de generación: 14-11-2019 a las 15:21:53
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -461,6 +461,24 @@ CREATE TABLE `temporada` (
 
 INSERT INTO `temporada` (`id`, `tipo_temp`, `inicio`, `fin`, `temporada`) VALUES
 (1, 'TR', '2019-11-05', '2019-12-29', '2019-2020');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `trofeos`
+--
+
+CREATE TABLE `trofeos` (
+  `lvbp` int(4) NOT NULL,
+  `caribe` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `trofeos`
+--
+
+INSERT INTO `trofeos` (`lvbp`, `caribe`) VALUES
+(12, 2);
 
 --
 -- Índices para tablas volcadas

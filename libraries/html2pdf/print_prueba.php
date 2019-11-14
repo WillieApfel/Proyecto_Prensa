@@ -214,7 +214,7 @@ include 'functions.php';
         <div class="barra">
             <h2>REPORTE DE PRENSA</h2>
             <h1>Navegantes del Magallanes</h1>
-            <h3>12 titulos de la LVBP, 2 Series del Caribe</h3>
+            <?php membrete(); ?>
             <div class="logo">
                 <img src="Logo M.png" alt="Logo Magallanes">
             </div>
@@ -294,9 +294,9 @@ include 'functions.php';
     <!---- PÁGINA 2 ---->
     <div class="pag-2">
         <div class="barra">
-            <h2>REPORTE DE PRENSA</h2>
+            <h2>ROSTER DE LA SEMANA</h2>
             <h1>Navegantes del Magallanes</h1>
-            <h3>12 titulos de la LVBP, 2 Series del Caribe</h3>
+            <?php membrete(); ?>
             <div class="logo">
                 <img src="Logo M.png" alt="Logo Magallanes">
             </div>
