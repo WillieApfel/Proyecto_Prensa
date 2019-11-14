@@ -12,8 +12,6 @@
                 </div>
               </div>
             </div> 
-              
-
 <script src="main.js"></script>
 <div id="content">
     <div class="panel box-shadow-none content-header">
@@ -184,6 +182,10 @@
                         </div>
                     <div class="row">
                         <div class="col-sm-4">
+
+
+                           <div class="row">
+                        <div class="col-sm-4">
                              <div class="form-group">
                                 <label for="nombre">Organización:</label>
                                 <input type="text" name="org" id="org" class="form-control" placeholder="Nombre" required>
@@ -198,9 +200,14 @@
                         </div>
                 <!--Footer del modal-->
                 <div class="modal-footer">
+<<<<<<< HEAD
                     <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
                     
                     <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+=======
+                     <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
+                    <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+>>>>>>> e2b1569b64ed0c9a315079f02f5d8533db0810cd
                          </div>
                       </form>
                     </div>
