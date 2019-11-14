@@ -1,5 +1,29 @@
 <?php include('header.php');
 ?>
+  <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Starts-->
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="page-header">
+                  <h4 class="page-title">Roster</h4>
+                  <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+                    <ul class="quick-links">
+                      <li><a href="#">Estadisticas</a></li>
+                      <li><a href="#">Juegos</a></li>
+                      <li><a href="#">Asistencia de los juegos</a></li>
+                    </ul>
+                    <ul class="quick-links ml-auto">
+                      <li><a href="#">Opciones</a></li>
+                      <li><a href="#">Analisis</a></li>
+                      <li><a href="#">Vista</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> 
+              
+
 <script src="main.js"></script>
 <div id="content">
     <div class="panel box-shadow-none content-header">
@@ -12,9 +36,14 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-sm-6">
+<<<<<<< HEAD
                             <h3>Roster</h3>
                         </div>
                         <div class="col-sm-3">
+=======
+                            </div>
+                          <div class="col-sm-3">
+>>>>>>> 0dcce1b8515d8c720a32c3bfc71fd504e7dee939
                             <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Nuevo</button></a>
                             <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" class="btn btn-success">Guardar</button>
                         </div>
@@ -23,7 +52,7 @@
                 <div class="panel-body">
                     <div class="container">
                         <div>
-                            <table id="datatables-example" class="table table-striped table-bordered table-responsive" width="100%" cellspacing="0">
+                            <table id="datatables-example" class="table table-striped table-bordered table-responsive" width="100%" cellspacing="0" style="margin-top: 40px">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
