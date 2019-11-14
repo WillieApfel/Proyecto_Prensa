@@ -88,9 +88,12 @@ include 'functions.php';
             font-size: 10px;
             margin-top: 7px;
         }
-        .columna table td, .columna table th{
+        .columna table th{
             padding: 3px;
             font-weight: normal;
+        }
+        .columna table td {
+            padding: 2px;
         }
         .contenido {
             position: relative;
@@ -170,11 +173,11 @@ include 'functions.php';
         }
         .logo-roster {
             top: -12px;
-            left: 38px;
+            left: 104px;
             width: 50px;
         }
         table.roster {
-            width: 100%;
+            max-width: 100%;
             margin: auto;
             border-collapse: collapse;
         }
@@ -184,6 +187,7 @@ include 'functions.php';
         }
         table.roster th, table.roster td{
             padding: 2px 10px 2px 6px;
+            font-size: 11px;
         }
         .datos-tecnicos {
             width: 70%;
@@ -203,8 +207,8 @@ include 'functions.php';
             line-height: 18px;
         }
         #barra-inf2 {
-            margin-top: 60px;
-            padding: 48px;
+            margin-top: 20px;
+            padding: 57px;
         }
     </style>
     <title>Boletin</title>
