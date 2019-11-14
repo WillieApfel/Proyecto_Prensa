@@ -34,8 +34,7 @@
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
           <ul class="navbar-nav">
-            
-          </ul>
+         </ul>
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <div class="form-group">
               <input type="search" class="form-control" placeholder="Search Here">
@@ -44,7 +43,7 @@
           <ul class="navbar-nav ml-auto">
            <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                 <!-- <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>  --> Cuenta 
+                 <!-- <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>  --> }}
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                  <!-- <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">  -->
@@ -127,25 +126,4 @@
           </ul>
         </nav> 
        <!--  partial -->
-        <div class="main-panel">
-          <div class="content-wrapper">
-            <!-- Page Title Header Starts-->
-            <div class="row page-title-header">
-              <div class="col-12">
-                <div class="page-header">
-                  <h4 class="page-title">Prensa</h4>
-                  <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
-                    <ul class="quick-links">
-                      <li><a href="#">Estadisticas</a></li>
-                      <li><a href="#">Juegos</a></li>
-                      <li><a href="#">Asistencia de los juegos</a></li>
-                    </ul>
-                    <ul class="quick-links ml-auto">
-                      <li><a href="#">Opciones</a></li>
-                      <li><a href="#">Analisis</a></li>
-                      <li><a href="#">Vista</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div> 
+      
