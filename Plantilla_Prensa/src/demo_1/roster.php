@@ -146,14 +146,14 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="date">Día de nacimiento:</label>
-                                <input type="date" name="firma" id="firma" class="form-control" placeholder="Año de Firma">
+                                <input type="date" name="firma" id="firma" class="form-control">
                             </div>
                         </div>
                     </div>
                      <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="apellido">Lugar de nacimiento:</label>
-                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" required>
+                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ciudad y Pais" required>
                             </div>
                         </div>
                     <div class="row">
