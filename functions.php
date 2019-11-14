@@ -17,7 +17,7 @@ function gameday(){
         
     
     
-    echo "<h3>Juegos del Día:</h3>";
+    
     while($row = mysqli_fetch_array($sql)){
         if ($row['home_club'] != 1 ){
             if($row['visitante'] != 1){
@@ -90,7 +90,7 @@ function tabla(){
 
     #usort($tabla, 'sort_by_wins');
     
-    $puesto=1;
+ 
 
     foreach($tabla as $equipo){
         #echo $equipo[0]." ".$equipo[1]." ".$equipo[2]."<br>";
@@ -122,9 +122,12 @@ function tabla(){
 function sort_by_wins($a,$b){
     return $b[2] - $a[2];
 }
+
+
 function sort_by_diference($a,$b){
     return $b[5] - $a[5];
 }
+
 
 function get_average($valor){
     if($valor==1){
@@ -148,53 +151,14 @@ function lastdaygame(){
         
     
     
-    echo "<h3>Resultados del día Anterior:</h3>";
+
     while($row = mysqli_fetch_array($sql)){
         $local = $row['local'];
         $visitante = $row['away'];   
 
-        echo "<p>".$visitante." ".$row['carreras_v']." - ".$row['carreras_hc']." ".$local."</p>";            
+        echo '<p class="mayus">'.$visitante.' '.$row['carreras_v'].' - '.$row['carreras_hc'].' '.$local.'</p>';            
     }
 }
-
-/*function defin_cmag(){
-    global $connect;
-    for($i=5;$i<42;$i++){
-        $prueba="SELECT * FROM calendario_liga c WHERE c.id=".$i;
-        $sql=mysqli_query($connect,"SELECT * FROM calendario_liga c WHERE c.id=".$i);
-        print($prueba."<br>");
-        $row=mysqli_fetch_array($sql);
-        $local=$row['home_club'];
-        $visitante=$row['visitante'];
-        print($local." ".$visitante."<br>");
-        if($local==1){
-            $tipo="L";
-         
-        }else {
-            $tipo="V";
-            
-        }
-
-        $probe="INSERT INTO `calendario_mag` (`id`, `nro_juego`, `tipo_juego`, `tiempo`, `asistencia`) VALUES ('".$i."', '".$i."', '".$tipo."', '', '0')"."<br>";
-        print($tipo."<br>".$probe);
-        $insert=mysqli_query($connect,"INSERT INTO `calendario_mag` (`id`, `nro_juego`, `tipo_juego`, `tiempo`, `asistencia`) VALUES ('".$i."', '".$i."', '".$tipo."', '', '0')");
-    }
-}*/
-
-
-/*function week_roster_PROVI(){
-    global $connect;
-    
-    $sql=mysqli_query($connect,"SELECT roster.id FROM roster");
-    while($row=mysqli_fetch_array($sql)){
-
-        mysqli_query($connect,"INSERT INTO `roster_week` (`id`, `jugador`, `semana_inicio`, `semana_fin`) VALUES (NULL, ".$row['id'].", '2019-11-04', '2019-11-10')");
-        echo "listo ".$row['id']."<br>";
-    }
-    
-}*/
-
-
 function schedule_mag(){
 
     global $connect, $fecha, $new_fecha, $row_temp;
@@ -207,15 +171,15 @@ function schedule_mag(){
         WHERE `fecha` BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."' ORDER BY cm.nro_juego");
 
     
-    echo"<table border=1>
+    echo'<table>
             <tr>
-                <th>#</th>
-                <th>Fecha</th>
-                <th>Resultados</th>
-                <th>Tiempo</th>
-                <th>Record</th>
-                <th>Asistencia</th>
-            </tr>";
+                <th scope="col">#</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Resultados</th>
+                <th scope="col">Tiempo</th>
+                <th scope="col">Récord</th>
+                <th scope="col">Asist</th>
+            </tr>';
     $played=0;
     $wins=0;
     $lose=0;
@@ -291,19 +255,7 @@ function roster_week(){
 
     $posiciones=['P','C','INF','UT','OF'];
 
-    echo"<table border=1>   
-            <tr>
-                <th>N°</th>
-                <th>Nombre</th>
-                <th>Pos.</th>
-                <th>B</th>
-                <th>T</th>
-                <th>H/W</th>
-                <th>Birthday</th>
-                <th>Birthplace</th>
-                <th>Org.</th>
-                <th>League</th>
-            </tr>";
+
 
     foreach($posiciones as $posicion){
         if($posicion=='P'){
@@ -349,7 +301,7 @@ function roster_week(){
         }   
 
     }
-    echo"</table>";
+
 
 }
 
@@ -364,10 +316,7 @@ function umpire(){
         <p class="mayus">1B: '.$row['primera'].'</p>
         <p class="mayus">2B: '.$row['segunda'].'</p>
         <p class="mayus">3B: '.$row['tercera'].'</p>
-        <p class="mayus">RV: '.$row['rv'].'</p>';
-
-
-    
+        <p class="mayus">RV: '.$row['rv'].'</p>';    
 }
 
 
@@ -382,10 +331,4 @@ function custom_dateformat($item,$referencia){
     return $retorno;
 }
 
-gameday();
-tabla();
-lastdaygame();
-umpire();
-schedule_mag();
-roster_week();
 ?>
