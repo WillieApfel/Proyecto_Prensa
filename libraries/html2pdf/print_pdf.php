@@ -23,8 +23,8 @@
         .mayus {
             text-transform: uppercase;
         }
-        .center {
-            text-align: center;
+        img {
+            max-width: 100%;
         }
         
         /***** PÁGINA 1 *****/
@@ -54,10 +54,10 @@
             font-size: 14px;
         }
         .logo {
-            max-width: 100px;
+            width: 100px;
             position: absolute;
             top: 50px;
-            left: 83%;
+            left: 82%;
         }
 
         /* Info subtitulo */
@@ -140,7 +140,69 @@
         }
 
         /***** PÁGINA 2 *****/
-
+        .sem-roster {
+            background-color: #010B40;
+            margin: 22px;
+            padding: 4px;
+        }
+        .sem-roster h3 {
+            text-align: center;
+            color: #fff;
+            font-style: italic;
+            margin: 0;
+        }
+        .contenido-roster {
+            width: 70%;
+            margin: auto;
+            height: 620px;
+        }
+        .titulo-roster {
+            position: relative;
+            text-align: center;
+            padding-left: 30px;
+        }
+        .titulo-roster h4 {
+            font-weight: bolder;
+            font-size: 18px;
+        }
+        .logo-roster {
+            top: -12px;
+            left: 38px;
+            width: 50px;
+        }
+        table.roster {
+            width: 100%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        table.roster th{
+            text-align: center;
+            background-color: #ABBDFF;
+        }
+        table.roster th, table.roster td{
+            padding: 2px 10px 2px 6px;
+        }
+        .datos-tecnicos {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+        .datos-tecnicos h4 {
+            margin-top: 30px;
+            margin-bottom: 16px;
+        }
+        .datos-tecnicos span {
+            font-weight: bold;
+            font-style: italic;
+        }
+        .datos-tecnicos p {
+            margin: 0;
+            line-height: 18px;
+        }
+        #barra-inf2 {
+            margin-top: 60px;
+            padding: 48px;
+        }
     </style>
     <title>Boletin</title>
 </head>
@@ -263,5 +325,61 @@
         </div><!--.contenido-->
         <div class="barra" id="barra-inf"></div>
     </div>
+
+    <!---- PÁGINA 2 ---->
+    <div class="pag-2">
+        <div class="barra">
+            <h2>REPORTE DE PRENSA</h2>
+            <h1>Navegantes del Magallanes</h1>
+            <h3>12 titulos de la LVBP, 2 Series del Caribe</h3>
+            <div class="logo">
+                <img src="Logo M.png" alt="Logo Magallanes">
+            </div>
+        </div>
+        <div class="sem-roster">
+            <h3 class="mayus">Roster Primera Semana</h3>
+        </div>
+
+        <div class="contenido-roster">
+            <div class="titulo-roster">
+                <div class="logo logo-roster">
+                    <img src="Logo M.png" alt="Logo Magallanes">
+                </div>
+                <h4>ROSTER NAVEGANTES DEL MAGALLANES BBC</h4>
+            </div>
+            <table class="roster" border="1">
+                <tr>
+                    <th scope="col">Nº</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">PO.</th>
+                    <th scope="col">B</th>
+                    <th scope="col">T</th>
+                    <th scope="col">H/W</th>
+                    <th scope="col">D.O.B</th>
+                    <th scope="col">BIRTHPLACE</th>
+                </tr>
+    
+                <tr>
+                    <td>15</td>
+                    <td>Rivas Willie</td>
+                    <td>RHP</td>
+                    <td>R</td>
+                    <td>R</td>
+                    <td>5'4"/128</td>
+                    <td>26/01/1999</td>
+                    <td>Valencia, Cbobo.</td>
+                </tr>
+            </table>
+        </div><!--.contenido-roster-->
+
+        <div class="datos-tecnicos">
+            <h4>STAFF TÉCNICO</h4>
+            <p><span>Mánager:</span> Enrique Reyes (50); <span>Coach de Banca:</span> Luis Carlos Rivera (16); <span>Coach de Bateo:</span> 
+            Carlos Mendoza (45); <span>Coach de Primera Base:</span> Nelson Escalona (25); <span>Coach de Tercera Base:</span> 
+            Félix Escalona (53); <span>Coach de Pitcheo: </span>Ramón García (32); <span>Coach de Bullpen: </span>Luis Rodríguez (79); 
+            <span>Catchers de Bullpen: </span>Nabor Jablonskis (74) y Geremi Natera.</p>
+        </div>
+        <div class="barra" id="barra-inf2"></div>
+    </div><!--.pag-2-->
 </body>
 </html>
