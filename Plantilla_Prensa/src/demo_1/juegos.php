@@ -5,7 +5,8 @@ function select_juegos(){
   global $connect, $fecha, $row_temp;  
   $sql= mysqli_query($connect,"SELECT c.*, cm.nro_juego, el.abreviatura AS 'loc', ev.abreviatura AS 'vis' 
       FROM calendario_liga c INNER JOIN calendario_mag cm ON c.id = cm.id INNER JOIN equipos el 
-      ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id ORDER BY cm.nro_juego");
+      ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id WHERE c.fecha NOT IN (SELECT redaccion.fecha 
+      FROM redaccion) ORDER BY cm.nro_juego");
   while($row=mysqli_fetch_array($sql)){
       if($row['home_club']==1){
           $rival=$row['vis'];

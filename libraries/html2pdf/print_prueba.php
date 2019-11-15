@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include 'functions_pdf.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
