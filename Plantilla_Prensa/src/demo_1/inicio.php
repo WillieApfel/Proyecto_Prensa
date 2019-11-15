@@ -76,7 +76,7 @@
                         <div class="wrapper">
                           <h5 class="mb-0">Derrotas</h5>
                           <div class="d-flex align-items-center">
-                            <h4 class="font-weight-semibold mb-0">4</h4>
+                            <h4 class="font-weight-semibold mb-0">5</h4>
                           </div>
                         </div>
                       </div>
