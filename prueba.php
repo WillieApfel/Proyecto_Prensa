@@ -459,10 +459,11 @@ function encabezado(){
 }
 
 function encabezado_dateformat($date){
-    $semana=array("'Monday'"=>"Lunes","'Tuesday'"=>"Martes","Wednesday"=>"Miércoles","'Thursday'"=>"Jueves",
-    "'Friday'"=>"Viernes","'Saturday'"=>"Sábado","'Sunday'"=>"Domingo");
-    $year=array("January","February","March","April","May","June","July","August","September",
-        "October","November","December");
+    $semana=array("Monday"=>"Lunes","Tuesday"=>"Martes","Wednesday"=>"Miércoles","Thursday"=>"Jueves",
+        "Friday"=>"Viernes","Saturday"=>"Sábado","Sunday"=>"Domingo");
+    $year=array("January"=>"Enero","February"=>"Febrero","March"=>"Marzo","April"=>"Abril","May"=>"Mayo",
+        "June"=>"Junio","July"=>"Julio","August"=>"Agosto","September"=>"Septiembre","October"=>"Octubre",
+        "November"=>"Noviembre","December"=>"Diciembre");
         for($i=1;$i<count($semana);$i++){
            
         }
@@ -471,8 +472,7 @@ function encabezado_dateformat($date){
 
         $new=date("l-d-F-Y", $date_unix);
         $array= explode('-',$new);
-        $algo=$array[0];
-        return $semana["'".$array[0]."'"];
+        return $semana[$array[0]]." ".$array[1]." de ".$year[$array[2]]." de ".$array[3];
 
 
 
