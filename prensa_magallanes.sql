@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2019 a las 14:55:07
+-- Tiempo de generación: 15-11-2019 a las 18:19:38
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -219,22 +219,23 @@ CREATE TABLE `equipos` (
   `nombrec` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `nombre` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
   `abreviatura` char(3) COLLATE utf8_spanish_ci NOT NULL,
-  `lugar` varchar(15) COLLATE utf8_spanish_ci NOT NULL
+  `lugar` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `estadio` varchar(50) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `equipos`
 --
 
-INSERT INTO `equipos` (`id`, `nombrec`, `nombre`, `abreviatura`, `lugar`) VALUES
-(1, 'Navegantes del Magallanes', 'Navegantes', 'MAG', 'Valencia'),
-(2, 'Águilas del Zulia', 'Águilas', 'ZUL', 'Maracaibo'),
-(3, 'Bravos de Margarita', 'Bravos', 'BRA', 'Porlamar'),
-(4, 'Cardenales de Lara', 'Cardenales', 'CAR', 'Barquisimeto'),
-(5, 'Caribes de Anzoátegui', 'Caribes', 'ANZ', 'Puerto la Cruz'),
-(6, 'Leones del Caracas', 'Leones', 'LEO', 'Caracas'),
-(7, 'Tiburones de la Guaira', 'Tiburones', 'TIB', 'Caracas'),
-(8, 'Tigres de Aragua', 'Tigres', 'ARA', 'Maracay');
+INSERT INTO `equipos` (`id`, `nombrec`, `nombre`, `abreviatura`, `lugar`, `estadio`) VALUES
+(1, 'Navegantes del Magallanes', 'Navegantes', 'MAG', 'Valencia', 'José Bernardo Pérez'),
+(2, 'Águilas del Zulia', 'Águilas', 'ZUL', 'Maracaibo', 'Luis Aparicio \"El Grande\"'),
+(3, 'Bravos de Margarita', 'Bravos', 'BRA', 'Porlamar', 'Nueva Esparta'),
+(4, 'Cardenales de Lara', 'Cardenales', 'CAR', 'Barquisimeto', 'Antonio Herrera Gutiérrez'),
+(5, 'Caribes de Anzoátegui', 'Caribes', 'ANZ', 'Puerto la Cruz', 'Alfonso \"Chico\" Carrasquel'),
+(6, 'Leones del Caracas', 'Leones', 'LEO', 'Caracas', 'Universitario'),
+(7, 'Tiburones de la Guaira', 'Tiburones', 'TIB', 'Caracas', 'Universitario'),
+(8, 'Tigres de Aragua', 'Tigres', 'ARA', 'Maracay', 'José Pérez Colmenares');
 
 -- --------------------------------------------------------
 
@@ -248,6 +249,19 @@ CREATE TABLE `redaccion` (
   `abridores` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `redaccion`
+--
+
+INSERT INTO `redaccion` (`id`, `redaccion`, `abridores`, `fecha`) VALUES
+(1, '<p><code>hzdgfjhsgfsfshfuisf</code></p>\r\n', '', '0000-00-00'),
+(2, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-20'),
+(3, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n\r\n<p>just combine the value and the stud_name e.g. 1_sre and split the value when get it into php. Javascript seems like hammer to crack a nut. N.B. this method assumes you can edit the the html. Here is what the html might look like:</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-22'),
+(4, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n\r\n<p>just combine the value and the stud_name e.g. 1_sre and split the value when get it into php. Javascript seems like hammer to crack a nut. N.B. this method assumes you can edit the the html. Here is what the html might look like:</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-06'),
+(5, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n\r\n<p>just combine the value and the stud_name e.g. 1_sre and split the value when get it into php. Javascript seems like hammer to crack a nut. N.B. this method assumes you can edit the the html. Here is what the html might look like:</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-08'),
+(6, '<p>YUHGFCJJFTHGHJVGHFFYJ</p>\r\n', 'tu mama fue mia', '2019-11-05'),
+(7, '<p>hgeuifefjiwhefugfoiwhf</p>\r\n', 'Yohan Pino (G=2 P3) vs Junior Guerra (G=2 P3)', '2019-11-09');
 
 -- --------------------------------------------------------
 
@@ -583,7 +597,7 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `redaccion`
 --
 ALTER TABLE `redaccion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `roster`
