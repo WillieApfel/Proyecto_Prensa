@@ -51,21 +51,21 @@ function tabla(){
         
         $played=mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
         WHERE (c.home_club=".$row['id']." OR c.visitante=".$row['id'].") AND (c.fecha 
-        BETWEEN '2019-11-05' AND '".$new_fecha."')");
+        BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
 
         $row_game=mysqli_fetch_array($played);
 
         $wins=mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
         WHERE ((c.home_club=".$row['id']." AND c.carreras_hc > c.carreras_v) 
         OR (c.visitante=".$row['id']." AND c.carreras_v > c.carreras_hc)) AND (c.fecha 
-        BETWEEN '2019-11-05' AND '".$new_fecha."')");
+        BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
 
         $row_win=mysqli_fetch_array($wins);
 
         $loses=mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
         WHERE ((c.home_club=".$row['id']." AND c.carreras_hc < c.carreras_v) 
         OR (c.visitante=".$row['id']." AND c.carreras_v < c.carreras_hc)) AND (c.fecha 
-        BETWEEN '2019-11-05' AND '".$new_fecha."')");
+        BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
 
         $row_lose=mysqli_fetch_array($loses);
 
@@ -379,6 +379,105 @@ function membrete(){
 
 }
 
+function encabezado(){
+
+    global $connect, $fecha, $new_fecha, $row_temp;
+
+    
+    $sql_partido = mysqli_query($connect,"SELECT C.*, cm.tv, el.nombrec AS 'local', ev.nombrec AS 'visit' 
+        FROM calendario_liga c INNER JOIN calendario_mag cm ON c.id=cm.id INNER JOIN equipos el 
+        ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id WHERE c.fecha='".$fecha."'");
+
+    $row_partido= mysqli_fetch_array($sql_partido);
+
+    /*if($row_partido['home_club']==1){
+        $sql_mag = mysqli_query($connect,"SELECT * FROM calendario_liga c WHERE c.home_club=1 AND 
+        (c.fecha BETWEEN '".$row_temp['inicio']."' AND '".$fecha."')");
+
+        $sql_otro = mysqli_query($connect,"SELECT * FROM calendario_liga c WHERE c.visitante="
+        .$row_partido['visitante']." AND (c.fecha BETWEEN '".$row_temp['inicio']."' AND '".$fecha."')");
+
+    }elseif($row_partido['visitante']==1){
+        $sql_mag = mysqli_query($connect,"SELECT * FROM calendario_liga c WHERE c.visitante=1 AND 
+        (c.fecha BETWEEN '".$row_temp['inicio']."' AND '".$fecha."')");
+
+        $sql_otro = mysqli_query($connect,"SELECT * FROM calendario_liga c WHERE c.home_club="
+        .$row_partido['homeclub']." AND (c.fecha BETWEEN '".$row_temp['inicio']."' AND '".$fecha."')");
+    }*/
+
+    $sql_mag_win = mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
+            WHERE ((c.home_club=1 AND c.carreras_hc > c.carreras_v) 
+            OR (c.visitante=1 AND c.carreras_v > c.carreras_hc)) AND (c.fecha 
+            BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
+
+        $sql_mag_lose = mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
+            WHERE ((c.home_club=1 AND c.carreras_hc < c.carreras_v) 
+            OR (c.visitante=1 AND c.carreras_v < c.carreras_hc)) AND (c.fecha 
+            BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
+
+    if($row_partido['home_club']==1){
+        $mag_nombre=$row_partido['local'];
+        $otro_nombre=$row_partido['visit'];
+
+        $sql_otro_win = mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
+            WHERE ((c.home_club=".$row_partido['visitante']." AND c.carreras_hc > c.carreras_v) 
+            OR (c.visitante=".$row_partido['visitante']." AND c.carreras_v > c.carreras_hc)) AND (c.fecha 
+            BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
+
+        $sql_otro_lose = mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
+            WHERE ((c.home_club=".$row_partido['visitante']." AND c.carreras_hc < c.carreras_v) 
+            OR (c.visitante=".$row_partido['visitante']." AND c.carreras_v < c.carreras_hc)) AND (c.fecha 
+            BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
+
+    }elseif($row_partido['visitante']==1){
+        $mag_nombre=$row_partido['visit'];
+        $otro_nombre=$row_partido['local'];
+
+        $sql_otro_win = mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
+            WHERE ((c.home_club=".$row_partido['home_club']." AND c.carreras_hc > c.carreras_v) 
+            OR (c.visitante=".$row_partido['home_club']." AND c.carreras_v > c.carreras_hc)) AND (c.fecha 
+            BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
+        
+        $sql_otro_lose = mysqli_query($connect,"SELECT COUNT('id') AS 'count' FROM calendario_liga c 
+            WHERE ((c.home_club=".$row_partido['home_club']." AND c.carreras_hc < c.carreras_v) 
+            OR (c.visitante=".$row_partido['home_club']." AND c.carreras_v < c.carreras_hc)) AND (c.fecha 
+            BETWEEN '".$row_temp['inicio']."' AND '".$new_fecha."')");
+    }
+
+    
+    $row_mag_win=mysqli_fetch_array($sql_mag_win);
+
+    $row_mag_lose=mysqli_fetch_array($sql_mag_lose);
+
+    $row_otro_win=mysqli_fetch_array($sql_otro_win);
+
+    $row_otro_lose=mysqli_fetch_array($sql_otro_lose);
+
+    echo "<h3>".$mag_nombre." (".$row_mag_win['count']."G - ".$row_mag_lose['count']."P) Vs. ".$otro_nombre.
+    " (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P)";
+
+}
+
+function encabezado_dateformat($date){
+    $semana=array("'Monday'"=>"Lunes","'Tuesday'"=>"Martes","Wednesday"=>"Miércoles","'Thursday'"=>"Jueves",
+    "'Friday'"=>"Viernes","'Saturday'"=>"Sábado","'Sunday'"=>"Domingo");
+    $year=array("January","February","March","April","May","June","July","August","September",
+        "October","November","December");
+        for($i=1;$i<count($semana);$i++){
+           
+        }
+
+        $date_unix = strtotime($date);
+
+        $new=date("l-d-F-Y", $date_unix);
+        $array= explode('-',$new);
+        $algo=$array[0];
+        return $semana["'".$array[0]."'"];
+
+
+
+}
+
 
 function custom_dateformat($item,$referencia){
     
@@ -391,7 +490,9 @@ function custom_dateformat($item,$referencia){
     return $retorno;
 }
 
+echo encabezado_dateformat($fecha);
 membrete();
+encabezado();
 gameday();
 tabla();
 lastdaygame();

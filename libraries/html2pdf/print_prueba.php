@@ -225,9 +225,7 @@ include 'functions.php';
         </div>
 
         <div class="subtitulo-informativo">
-            <h3>Navegantes del Magallanes(69 69) Vs. New York Yankees (F F)</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <?php cabeza(); ?>
             <p>Transmision TV: DirecTv Sports</p>
         </div>
         
@@ -243,10 +241,7 @@ include 'functions.php';
             </div><!--.columna-->
         
             <div class="columna" id="reporte">
-                <p>Integer quis aliquam velit. Nullam tincidunt neque ut tempus semper. Morbi tincidunt volutpat placerat. Vestibulum dignissim, mauris eu tincidunt rhoncus, magna urna posuere purus, quis convallis libero nibh nec arcu. Nullam ullamcorper ligula sed lorem facilisis tincidunt. Curabitur bibendum enim ut tincidunt sodales. Phasellus non lobortis velit. Sed dignissim, enim non viverra elementum, urna leo convallis risus, a posuere odio diam id tellus. Morbi in ante a ante cursus posuere. Fusce ultrices et neque non malesuada. Pellentesque sit amet mauris id urna pellentesque interdum eu nec sapien.</p>
-                <p>Nunc dignissim nibh eros, a sollicitudin diam efficitur vitae. Pellentesque laoreet eros a diam porttitor semper. In congue semper gravida. Vestibulum iaculis nisl in eros facilisis, a semper enim bibendum. Phasellus et faucibus odio. Sed sed purus malesuada, fermentum dui eget, congue ante. Vestibulum vulputate molestie elit sed tincidunt. Suspendisse sed laoreet risus. Integer tincidunt tortor nisl, quis vulputate ligula pellentesque eu. Nullam non auctor ligula. Phasellus tempor leo ut neque ultricies luctus.</p>
-                <p>Pellentesque id elit ut justo auctor consectetur. Duis laoreet congue lacus, non tristique tortor faucibus sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam efficitur nec felis non ullamcorper. Nam eu placerat mi. Vivamus vel justo pharetra, suscipit ligula nec, suscipit est. Curabitur a nibh eget leo auctor elementum. Duis mattis feugiat viverra. Morbi sed sem id orci ornare interdum ut in tellus. Vestibulum tincidunt quam risus, in finibus leo viverra ut. Fusce ut tellus lorem. Cras at nulla mi. Sed maximus, libero vel interdum ornare, nibh orci iaculis ipsum, et tristique risus ligula laoreet diam. Integer elementum vitae sapien quis condimentum. Fusce lacinia ante quis enim pellentesque, ut porta sapien molestie.</p>
-                <p>Etiam dictum augue augue, in tincidunt nunc pulvinar quis. Mauris gravida est at ex tempor tincidunt. Etiam lacinia congue auctor. Mauris non pretium magna, non venenatis nunc. Praesent egestas enim ac mi molestie, eu finibus metus laoreet. Integer in purus aliquet, placerat magna ac, gravida turpis. In eget tincidunt nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eget lacinia turpis, ac lobortis magna. Donec tempus felis nulla, sit amet ullamcorper augue dictum quis. Aliquam rhoncus a urna non semper. Ut at nibh aliquam, blandit mi sed, rutrum eros. Proin tempus dapibus blandit. Curabitur non porttitor metus. Ut luctus neque lacus, eget laoreet dui elementum non. Pellentesque sagittis tellus vel massa maximus maximus.</p>
+                <?php redact(); ?>    
             </div><!--.columna-->
         
             <div class="columna" id="varios">
