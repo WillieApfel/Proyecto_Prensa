@@ -384,7 +384,7 @@ function encabezado(){
     global $connect, $fecha, $new_fecha, $row_temp;
 
     
-    $sql_partido = mysqli_query($connect,"SELECT C.*, cm.tv, el.nombrec AS 'local', ev.nombrec AS 'visit' 
+    $sql_partido = mysqli_query($connect,"SELECT C.*, cm.tv, el.nombrec AS 'local', el.estadio, ev.nombrec AS 'visit' 
         FROM calendario_liga c INNER JOIN calendario_mag cm ON c.id=cm.id INNER JOIN equipos el 
         ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id WHERE c.fecha='".$fecha."'");
 
@@ -453,10 +453,30 @@ function encabezado(){
 
     $row_otro_lose=mysqli_fetch_array($sql_otro_lose);
 
+    $sql2 = mysqli_query($connect, 'SELECT * FROM redaccion r WHERE r.fecha="'.$fecha.'"');
+    $row2=mysqli_fetch_array($sql2);
+
     echo "<h3>".$mag_nombre." (".$row_mag_win['count']."G - ".$row_mag_lose['count']."P) Vs. ".$otro_nombre.
-    " (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P)";
+    " (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P)</h3>";
+    echo"<p>".$row2['abridores']."</p>";
+    echo "<p>FECHA: ".encabezado_dateformat($fecha).". HORA: ".timeformat($row_partido['hora']).". LUGAR: Estadio ".
+    $row_partido['estadio'].".</p>";
+    echo "TRANSMISIÓN TV: ".$row_partido['tv'];
 
 }
+
+function timeformat($time){
+    $array= explode(':',$time);
+    if(intval($array[0])>12){
+        $hora=intval($array[0])-12;
+        $uso=" PM";
+    }else{
+        $hora=intval($array[0]);
+        $uso=" AM";
+        }
+    return $hora.":".$array[1].$uso;
+}
+
 
 function encabezado_dateformat($date){
     $semana=array("Monday"=>"Lunes","Tuesday"=>"Martes","Wednesday"=>"Miércoles","Thursday"=>"Jueves",
@@ -464,9 +484,6 @@ function encabezado_dateformat($date){
     $year=array("January"=>"Enero","February"=>"Febrero","March"=>"Marzo","April"=>"Abril","May"=>"Mayo",
         "June"=>"Junio","July"=>"Julio","August"=>"Agosto","September"=>"Septiembre","October"=>"Octubre",
         "November"=>"Noviembre","December"=>"Diciembre");
-        for($i=1;$i<count($semana);$i++){
-           
-        }
 
         $date_unix = strtotime($date);
 
@@ -490,7 +507,6 @@ function custom_dateformat($item,$referencia){
     return $retorno;
 }
 
-echo encabezado_dateformat($fecha);
 membrete();
 encabezado();
 gameday();

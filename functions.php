@@ -327,13 +327,12 @@ function membrete(){
 }
 
 
-function cabeza(){
+function encabezado(){
 
-    global $connect, $fecha, $new_fecha, $row_temp;
     global $connect, $fecha, $new_fecha, $row_temp;
 
     
-    $sql_partido = mysqli_query($connect,"SELECT C.*, cm.tv, el.nombrec AS 'local', ev.nombrec AS 'visit' 
+    $sql_partido = mysqli_query($connect,"SELECT C.*, cm.tv, el.nombrec AS 'local', el.estadio, ev.nombrec AS 'visit' 
         FROM calendario_liga c INNER JOIN calendario_mag cm ON c.id=cm.id INNER JOIN equipos el 
         ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id WHERE c.fecha='".$fecha."'");
 
@@ -402,12 +401,15 @@ function cabeza(){
 
     $row_otro_lose=mysqli_fetch_array($sql_otro_lose);
 
-    echo "<h3>".$mag_nombre." (".$row_mag_win['count']."G - ".$row_mag_lose['count']."P) Vs. ".$otro_nombre.
-    " (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P)</h3>";
-
     $sql2 = mysqli_query($connect, 'SELECT * FROM redaccion r WHERE r.fecha="'.$fecha.'"');
     $row2=mysqli_fetch_array($sql2);
+
+    echo "<h3>".$mag_nombre." (".$row_mag_win['count']."G - ".$row_mag_lose['count']."P) Vs. ".$otro_nombre.
+    " (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P)</h3>";
     echo"<p>".$row2['abridores']."</p>";
+    echo "<p>FECHA: ".encabezado_dateformat($fecha).". HORA: ".timeformat($row_partido['hora']).". LUGAR: Estadio ".
+    $row_partido['estadio'].".</p>";
+    echo "<p>TRANSMISIÓN TV: ".$row_partido['tv']."</p>";
 
 }
 function redact(){
@@ -415,6 +417,33 @@ function redact(){
     $sql = mysqli_query($connect, 'SELECT * FROM redaccion r WHERE r.fecha="'.$fecha.'"');
     $row=mysqli_fetch_array($sql);
     echo $row['redaccion'];
+}
+function timeformat($time){
+    $array= explode(':',$time);
+    if(intval($array[0])>12){
+        $hora=intval($array[0])-12;
+        $uso=" PM";
+    }else{
+        $hora=intval($array[0]);
+        $uso=" AM";
+        }
+    return $hora.":".$array[1].$uso;
+}
+
+
+function encabezado_dateformat($date){
+    $semana=array("Monday"=>"Lunes","Tuesday"=>"Martes","Wednesday"=>"Miércoles","Thursday"=>"Jueves",
+        "Friday"=>"Viernes","Saturday"=>"Sábado","Sunday"=>"Domingo");
+    $year=array("January"=>"Enero","February"=>"Febrero","March"=>"Marzo","April"=>"Abril","May"=>"Mayo",
+        "June"=>"Junio","July"=>"Julio","August"=>"Agosto","September"=>"Septiembre","October"=>"Octubre",
+        "November"=>"Noviembre","December"=>"Diciembre");
+
+        $date_unix = strtotime($date);
+
+        $new=date("l-d-F-Y", $date_unix);
+        $array= explode('-',$new);
+        return $semana[$array[0]]." ".$array[1]." de ".$year[$array[2]]." de ".$array[3];
+
 }
 
 function select_juegos(){

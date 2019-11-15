@@ -225,8 +225,7 @@ include 'functions.php';
         </div>
 
         <div class="subtitulo-informativo">
-            <?php cabeza(); ?>
-            <p>Transmision TV: DirecTv Sports</p>
+            <?php encabezado(); ?>
         </div>
         
         <div class="contenido">
