@@ -77,19 +77,17 @@ include 'connect.php';
                 <span class="menu-title">Inicio</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            
+            <div class="nav-item">
+              <a class="nav-link" data-toggle="collapse" type="selector" href="#ui-basic1" aria-expanded="false" aria-controls="#ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
                 <span class="menu-title">Generador de PDF</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="ui-basic">
+              <div class="collapse" id="ui-basic1">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="juegos.php">Noticias</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="roster.php">Roster</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="resultados.php">Resultados</a>
@@ -99,9 +97,10 @@ include 'connect.php';
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            </div>
+            
+            <div class="nav-item">
+              <a class="nav-link" data-toggle="collapse" type="selector" href="#ui-basic" aria-expanded="false" aria-controls="selector">
                 <i class="menu-icon typcn typcn-coffee"></i>
                 <span class="menu-title">Partidos</span>
                 <i class="menu-arrow"></i>
@@ -122,7 +121,25 @@ include 'connect.php';
                   </li>
                 </ul>
               </div>
-            </li>
+            </div>
+            
+               <div class="nav-item">
+              <a class="nav-link" data-toggle="collapse" type="selector" href="#ui-basic2" aria-expanded="false" aria-controls="selector">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Equipo</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic2">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="roster.php">Roster General</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Roster Semanal</a>
+                  </li>
+              </div>
+            </div>
+          
              <li class="nav-item">
            <!--   <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <i class="menu-icon typcn typcn-document-add"></i>
@@ -151,5 +168,6 @@ include 'connect.php';
             </li>
           </ul>
         </nav> 
+   
        <!--  partial -->
       

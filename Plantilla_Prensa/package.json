@@ -1,8 +1,8 @@
 {
-  "name": "Star_admin",
+  "name": "admin",
   "version": "3.5.0",
   "description": "",
-  "main": "index.html",
+  "main": "inicio.php",
   "dependencies": {
     "@mdi/font": "3.3.92",
     "bootstrap": "4.3.1",
@@ -45,11 +45,8 @@
     "require-dir": "^1.0.0",
     "run-sequence": "^1.2.2"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "BootstrapDash",
-  "url": "http://bootstrapdash.com",
-  "copyright": "",
-  "license": ""
+  {
+  
+  }
+ 
 }

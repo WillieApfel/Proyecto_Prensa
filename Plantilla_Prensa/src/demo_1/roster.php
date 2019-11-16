@@ -180,34 +180,52 @@
                                 </select>
                             </div>
                         </div>
+                    
+                     <script>
+                       function comprobar(){
+                        
+        if (document.getElementById("chec").checked == true){
+            document.getElementById('desbloq').readOnly = false;
+            document.getElementById('desbloq1').readOnly = false;
+        }else{ 
+            document.getElementById('desbloq').readOnly = true;
+            document.getElementById('desbloq1').readOnly = true;
+        
+                }
+              }
+                 
+                         </script>
+                    
+                     <label for="chec">¿Tienen?<input name="chec" id="chec" onchange="comprobar();" style="form-control; position: absolute; margin-left: 10px;"type="checkbox"></label>  
                     <div class="row">
                         <div class="col-sm-4">
 
 
                            <div class="row">
+                               
                         <div class="col-sm-4">
                              <div class="form-group">
-                                <label for="nombre">Organización:</label>
-                                <input type="text" name="org" id="org" class="form-control" placeholder="Nombre" required>
+                                
+                                <label for="chec">Organización</label> 
+                                 
+                                <input style="width: 140px " type="text" name="text" class="form-control" placeholder="Nombre" id="desbloq" readonly> 
+                                
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                                <label for="nombre">Liga:</label>
+                                <label for="chec">Liga</label>
                                  <br>
-                                <input style="width: 140px "type="text" name="lig" id="lig" class="form-control" placeholder="Nombre" required>
+                                <input style="width: 140px "type="text" name="text"  class="form-control" placeholder="Nombre" id="desbloq1" readonly> 
                             </div>
                         </div>
                 <!--Footer del modal-->
                 <div class="modal-footer">
-<<<<<<< HEAD
-                    <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
+
+                    <button style="margin-left: 70px; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
                     
-                    <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
-=======
-                     <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true"><span class="glyphicon glyphicon-ok "><span>Agregar</button>
-                    <button type="reset" name="reset" data-dismiss="modal" class="btn btn-default" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
->>>>>>> e2b1569b64ed0c9a315079f02f5d8533db0810cd
+                  <button style="margin-left: 120px; background-color: red; border-color: red; color: white" type="reset" name="reset" data-dismiss="modal" class="btn btn-default}" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+
                          </div>
                       </form>
                     </div>
