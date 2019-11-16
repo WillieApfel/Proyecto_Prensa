@@ -255,8 +255,6 @@ function roster_week(){
 
     $posiciones=['P','C','INF','UT','OF'];
 
-
-
     foreach($posiciones as $posicion){
         if($posicion=='P'){
 
