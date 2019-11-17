@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Formulario de Prensa</title>
+</head>
+<body>
+    <h2 style= "font-size: 60px ">Navegantes del Magallanes</h2>
+    <div class="container" id="advanced-search-form">
+        <form>
+            <br>
+         <div class="form-group">
+                <label for="titulo">Titulo de la noticia</label>
+                <input type="text" class="form-control" id="titulo">
+            </div>
+            <div class="form-group">
+                <label for="subinfo">Subtitulo de la noticia</label>
+                <input type="text" class="form-control" id="subinfo">
+            </div>
+            <div class="form-group">
+                <label>Noticia de la portada</label>
+                <textarea type="text" class="form-control" id="notice" style="width: 850px; height: 500px"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Arbitros</label>
+                <br>
+                <br>
+                    <select name="OS" class="form-control" style="width: 80px; position: absolute">
+                    <option value="1">H.P.</option> 
+                    <option value="2">1B</option> 
+                    <option value="3">2B</option>
+                    <option value="4">3B</option> 
+                    <option value="5">R.V.</option> 
+                 </select>
+                <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros1" style="margin-left: 90px; width: 300px">
+                <br>
+                <select name="OS" class="form-control"  style="width: 80px; position: absolute">
+                <option value="1">H.P.</option> 
+                <option value="2">1B</option> 
+                <option value="3">2B</option>
+                <option value="4">3B</option> 
+                <option value="5">R.V.</option> 
+             </select>
+                <input tbr♠ype="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros2"  style="margin-left: 90px; width: 300px">
+            <br>
+             <select name="OS" class="form-control" style="width: 80px; position: absolute">
+             <option value="1">H.P.</option> 
+             <option value="2">1B</option> 
+             <option value="3">2B</option>
+             <option value="4">3B</option> 
+             <option value="5">R.V.</option> 
+          </select>
+                <input type="text" class="form-control"  placeholder="Nombre y Apellido" id="arbitros3" style="margin-left: 90px; width: 300px">
+                <br>
+                <select name="OS" class="form-control" style="width: 80px; position: absolute">
+                <option value="1">H.P.</option> 
+                <option value="2">1B</option> 
+                <option value="3">2B</option>
+                <option value="4">3B</option> 
+                <option value="5">R.V.</option> 
+             </select>
+                <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros4" style="margin-left: 90px; width: 300px">
+              <br>
+             <select name="OS"class="form-control" style="width: 80px; position: absolute">
+             <option value="1">H.P.</option> 
+             <option value="2">1B</option> 
+             <option value="3">2B</option>
+             <option value="4">3B</option> 
+             <option value="5">R.V.</option> 
+          </select>
+                <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros5" style="margin-left: 90px; width: 300px">
+            </div>
+            <div class="form-group" class="form-control">
+             <br>
+                <label for="number">Juegos del dia anterior </label>
+                <br>
+                <!-- <label for="text">Local</label>
+                <label for="text" style="float: right">Visitante</label> -->
+                <br>
+                <select name="OS" class="form-control" style="width: 250px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select>
+                
+                <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 260px; position: absolute"> 
+                <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 350px; position: absolute">
+                 
+                <select name="OS" class="form-control" style="width: 250px; margin-left: 440px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select>
+                <br>
+                <br>
+                <br>
+                <select name="OS" class="form-control" style="width: 250px; position: absolute">
+                        <option value="1">Navegantes del Magallanes</option> 
+                        <option value="2">Leones del Caracas</option> 
+                        <option value="3">Cardenales del Lara</option>
+                        <option value="4">Bravos de Margarita</option> 
+                        <option value="5">Aguilas del Zulia</option> 
+                        <option value="6">Tigres de Aragua</option> 
+                        <option value="7">Tiburones de la Guaira</option> 
+                        <option value="8">Caribes de Anzoategui</option> 
+                    </select>
+                    
+                    <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 260px; position: absolute"> 
+                    <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 350px; position: absolute">
+                     
+                    <select name="OS" class="form-control" style="width: 250px; margin-left: 440px; position: absolute">
+                        <option value="1">Navegantes del Magallanes</option> 
+                        <option value="2">Leones del Caracas</option> 
+                        <option value="3">Cardenales del Lara</option>
+                        <option value="4">Bravos de Margarita</option> 
+                        <option value="5">Aguilas del Zulia</option> 
+                        <option value="6">Tigres de Aragua</option> 
+                        <option value="7">Tiburones de la Guaira</option> 
+                        <option value="8">Caribes de Anzoategui</option> 
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                <select name="OS" class="form-control" style="width: 250px; position: absolute">
+                        <option value="1">Navegantes del Magallanes</option> 
+                        <option value="2">Leones del Caracas</option> 
+                        <option value="3">Cardenales del Lara</option>
+                        <option value="4">Bravos de Margarita</option> 
+                        <option value="5">Aguilas del Zulia</option> 
+                        <option value="6">Tigres de Aragua</option> 
+                        <option value="7">Tiburones de la Guaira</option> 
+                        <option value="8">Caribes de Anzoategui</option> 
+                    </select>
+                    
+                    <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 260px; position: absolute"> 
+                    <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 350px; position: absolute">
+                     
+                    <select name="OS" class="form-control" style="width: 250px; margin-left: 440px; position: absolute">
+                        <option value="1">Navegantes del Magallanes</option> 
+                        <option value="2">Leones del Caracas</option> 
+                        <option value="3">Cardenales del Lara</option>
+                        <option value="4">Bravos de Margarita</option> 
+                        <option value="5">Aguilas del Zulia</option> 
+                        <option value="6">Tigres de Aragua</option> 
+                        <option value="7">Tiburones de la Guaira</option> 
+                        <option value="8">Caribes de Anzoategui</option> 
+                    </select>
+                <br>
+                <br>
+                <br>
+               <select name="OS" class="form-control" style="width: 250px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select>
+                
+                <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 260px; position: absolute"> 
+                <input type="number" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 350px; position: absolute">
+                 
+                <select name="OS" class="form-control" style="width: 250px; margin-left: 440px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select>
+            </div>
+           
+            <div class="form-group">
+                    <br>
+                    <br>
+                    <br>
+            <label for="jdia">Juegos del día</label>
+                <br>
+                <br>
+            <input type="text" class="form-control" placeholder="Ubicación del juego" id="jdia" style="width: 350px">
+                    <br>
+                <select name="OS" class="form-control"  style="width: 250px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select> 
+
+                <!-- <label style="margin-left: 280px; margin-bottom: 10px">VS</label> -->
+               
+                <select name="OS" class="form-control"  style="width: 250px; margin-left: 320px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select>
+                <br>
+                <br>
+                <br>
+                <input type="text" class="form-control" placeholder="Ubicación del juego" id="jdia" style="width: 350px">
+                    <br>
+                <select name="OS" class="form-control"  style="width: 250px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select> 
+
+                <!-- <label style="margin-left: 280px; margin-bottom: 10px">VS</label> -->
+               
+                <select name="OS" class="form-control"  style="width: 250px; margin-left: 320px; position: absolute">
+                    <option value="1">Navegantes del Magallanes</option> 
+                    <option value="2">Leones del Caracas</option> 
+                    <option value="3">Cardenales del Lara</option>
+                    <option value="4">Bravos de Margarita</option> 
+                    <option value="5">Aguilas del Zulia</option> 
+                    <option value="6">Tigres de Aragua</option> 
+                    <option value="7">Tiburones de la Guaira</option> 
+                    <option value="8">Caribes de Anzoategui</option> 
+                </select>
+             <br>
+             <br>
+             <br>
+             <input type="text" class="form-control" placeholder="Ubicación del juego" id="jdia" style="width: 350px">
+             <br>
+         <select name="OS" class="form-control"  style="width: 250px; position: absolute">
+             <option value="1">Navegantes del Magallanes</option> 
+             <option value="2">Leones del Caracas</option> 
+             <option value="3">Cardenales del Lara</option>
+             <option value="4">Bravos de Margarita</option> 
+             <option value="5">Aguilas del Zulia</option> 
+             <option value="6">Tigres de Aragua</option> 
+             <option value="7">Tiburones de la Guaira</option> 
+             <option value="8">Caribes de Anzoategui</option> 
+         </select> 
+
+         <!-- <label style="margin-left: 280px; margin-bottom: 10px">VS</label> -->
+        
+         <select name="OS" class="form-control"  style="width: 250px; margin-left: 320px; position: absolute">
+             <option value="1">Navegantes del Magallanes</option> 
+             <option value="2">Leones del Caracas</option> 
+             <option value="3">Cardenales del Lara</option>
+             <option value="4">Bravos de Margarita</option> 
+             <option value="5">Aguilas del Zulia</option> 
+             <option value="6">Tigres de Aragua</option> 
+             <option value="7">Tiburones de la Guaira</option> 
+             <option value="8">Caribes de Anzoategui</option> 
+         </select>
+                <br>
+                <br>
+            </div>
+         </form>
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="width: 150px; margin-left: 210px">Generar PDF</a>
+        <br>
+        <br>
+    </div>
+</body>
+</html>

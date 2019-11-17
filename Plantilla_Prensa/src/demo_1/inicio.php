@@ -27,7 +27,7 @@
                 <div class="page-header-toolbar">
                   <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-left"></i></button>
-                    <button type="button" class="btn btn-secondary">03/02/2019 - 20/08/2019</button>
+                    <button type="button" class="btn btn-secondary">05/11/2019 - Hoy</button>
                     <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-right"></i></button>
                   </div>
                   <div class="filter-wrapper">

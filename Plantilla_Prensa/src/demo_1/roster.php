@@ -27,7 +27,7 @@ include '..\..\..\functions_forms.php';
                         <div class="col-sm-6">
                             </div>
                           <div class="col-sm-3">
-                            <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Añadir Jugador</button></a>
+                            <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Añadir</button></a>
                         </div>
                     </div>
                 </div>
