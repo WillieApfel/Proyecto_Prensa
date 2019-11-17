@@ -1,4 +1,5 @@
 <?php include('header.php');
+include '..\..\..\functions_forms.php';
 ?>
   <div class="main-panel">
           <div class="content-wrapper">
@@ -26,8 +27,7 @@
                         <div class="col-sm-6">
                             </div>
                           <div class="col-sm-3">
-                            <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Nuevo</button></a>
-                            <button style="margin-left: 400px; position: absolute; background-color:#0000FF; border-color:#0000FF" class="btn btn-success">Guardar</button>
+                            <a href="#ventana0" data-toggle="modal"><button style="margin-left: 300px; position: absolute; background-color:#0000FF; border-color:#0000FF" data-toggle="modal" class="btn btn-success">Añadir Jugador</button></a>
                         </div>
                     </div>
                 </div>
@@ -37,23 +37,19 @@
                             <table id="datatables-example" class="table table-striped table-bordered table-responsive" width="100%" cellspacing="0" style="margin-top: 40px">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Apellido</th>
                                         <th>Nro</th>
+                                        <th>Nombre</th>
                                         <th>Posición</th>
-                                        <th>Posición Sec</th>
-                                         <th>Bateo</th>
-                                        <th>Throw</th>
-                                        <th>Altura</th>
-                                        <th>Peso</th>    
-                                        <th>Día de nacimiento</th>
-                                        <th>Lugar de nacimiento</th>
-                                        <th>Org</th>
+                                        <th>B/T</th>
+                                        <th>H/W</th>   
+                                        <th>Birthday</th>
+                                        <th>Birthplace</th>
+                                        <th>Organización</th>
                                         <th>Liga</th>
                                     </tr>
                                 </thead>
                                 <tbody id="jugadores">
+                                <?php roster_view() ?>
                                 </tbody>
                             </table>
                         </div>
@@ -72,7 +68,7 @@
                 <h4 class="modal-title">Nuevo Jugador</h4>
             </div>
             <!--Body del Modal con formulario-->
-            <form method="POST" action="insert.php" enctype="multipart/form-data">
+            <form method="POST" action="roster.php" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-4">
@@ -89,7 +85,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="numero">Numero:</label>
+                                <label for="numero">Número:</label>
                                 <input type="number" name="numero" id="numero" class="form-control" placeholder="Numero">
                             </div>
                         </div>
@@ -98,74 +94,90 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="nombre">Altura:</label>
-                                <select class="form-control" name="pies" id="pies">
-                                    <option value="5\'">5'</option>
-                                    <option value="6\'">6'</option>
-                                    <option value="7\'">7'</option>
+                                <select class="form-control" name="h_feet" id="pies">
+                                    <option value="5">5'</option>
+                                    <option value="6">6'</option>
+                                    <option value="7">7'</option>
                                 </select>
-                                <select class="form-control" name="pulgadas" id="pulgadas">
-                                    <option value='1"'>1''</option>
-                                    <option value="1\'\'">1''</option>
-                                    <option value="2\'\'">2''</option>
-                                    <option value="3\'\'">3''</option>
-                                    <option value="4\'\'">4''</option>
-                                    <option value="5\'\'">5''</option>
-                                    <option value="6\'\'">6''</option>
-                                    <option value="7\'\'">7''</option>
-                                    <option value="8\'\'">8''</option>
-                                    <option value="9\'\'">9''</option>
-                                    <option value="10\'\'">10''</option>
-                                    <option value="11\'\'">11''</option>
+                                <select class="form-control" name="h_inches" id="pulgadas">
+                                    <option value="0">0''</option>
+                                    <option value="1">1''</option>
+                                    <option value="2">2''</option>
+                                    <option value="3">3''</option>
+                                    <option value="4">4''</option>
+                                    <option value="5">5''</option>
+                                    <option value="6">6''</option>
+                                    <option value="7'">7''</option>
+                                    <option value="8">8''</option>
+                                    <option value="9">9''</option>
+                                    <option value="10">10''</option>
+                                    <option value="11">11''</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="apellido">Peso(lbs):</label>
+                                <label for="peso">Peso(lbs):</label>
                                 <input type="number" name="peso" id="peso" class="form-control" placeholder="Peso" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="date">Día de nacimiento:</label>
-                                <input type="date" name="firma" id="firma" class="form-control">
+                                <label for="b_day">Día de nacimiento:</label>
+                                <input type="date" name="b_day" id="firma" class="form-control">
                             </div>
                         </div>
                     </div>
                      <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="apellido">Lugar de nacimiento:</label>
-                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ciudad y Pais" required>
+                                <label for="b_place">Lugar de nacimiento:</label>
+                                <input type="text" name="b_place" id="apellido" class="form-control" placeholder="Ciudad, País" required>
                             </div>
                         </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="Posicion">Posicion</label>
-                                <select name="posicion" id="posicion" class="form-control" required>
-                                    <option value="P">Pitcher</option>
-                                    <option value="IF">Infielder</option>
-                                    <option value="OF">Outfielder</option>
+                                <label for="pos">Posicion</label>
+                                <select name="pos" id="posicion" class="form-control" required>
+                                    <option value="RHP">Pitcher Derecho</option>
+                                    <option value="LHP">Pitcher Zurdo</option>
                                     <option value="C">Catcher</option>
+                                    <option value="1B">Primera Base</option>
+                                    <option value="2B">Segunda Base</option>
+                                    <option value="3B">Tercera Base</option>
+                                    <option value="SS">Short Stop</option>
+                                    <option value="IF">Infielder</option>
+                                    <option value="LF">Left Field</option>
+                                    <option value="CF">Center Field</option>
+                                    <option value="RF">Right Field</option>
+                                    <option value="OF">Outfielder</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="Posicion">Posición Sec</label>
-                                <select name="nivel" id="nivel" class="form-control" required>
-                                    <option value="P2">Pitcher</option>
-                                    <option value="IF2">Infielder</option>
-                                    <option value="OF2">Outfielder</option>
-                                     <option value="C2">Catcher</option>
+                                <label for="pos_sec">Posición Sec</label>
+                                <select name="pos_sec" id="nivel" class="form-control" required>
+                                <option value="RHP">Pitcher Derecho</option>
+                                    <option value="LHP">Pitcher Zurdo</option>
+                                    <option value="C">Catcher</option>
+                                    <option value="1B">Primera Base</option>
+                                    <option value="2B">Segunda Base</option>
+                                    <option value="3B">Tercera Base</option>
+                                    <option value="SS">Short Stop</option>
+                                    <option value="IF">Infielder</option>
+                                    <option value="LF">Left Field</option>
+                                    <option value="CF">Center Field</option>
+                                    <option value="RF">Right Field</option>
+                                    <option value="OF">Outfielder</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                      <div class="col-md-6">
                             <div class="form-group">
-                                <label for="Posicion">Bateo</label>
-                                <select name="posicion" id="posicion" class="form-control" required>
+                                <label for="bat">Bat</label>
+                                <select name="bat" id="posicion" class="form-control" required>
                                     <option value="R">R</option>
                                     <option value="L">L</option>
                                 </select>
@@ -173,8 +185,8 @@
                         </div>
                      <div class="col-md-6">
                             <div class="form-group">
-                                <label for="Posicion">Thorw</label>
-                                <select name="posicion" id="posicion" class="form-control" required>
+                                <label for="throw">Throw</label>
+                                <select name="throw" id="posicion" class="form-control" required>
                                     <option value="R">R</option>
                                     <option value="L">L</option>
                                 </select>
@@ -182,21 +194,21 @@
                         </div>
                     
                      <script>
-                       function comprobar(){
+                        function comprobar(){
                         
-        if (document.getElementById("chec").checked == true){
-            document.getElementById('desbloq').readOnly = false;
-            document.getElementById('desbloq1').readOnly = false;
-        }else{ 
-            document.getElementById('desbloq').readOnly = true;
-            document.getElementById('desbloq1').readOnly = true;
-        
-                }
-              }
-                 
+                            if (document.getElementById("chec").checked == true){
+                                document.getElementById('desbloq').readOnly = false;
+                                document.getElementById('desbloq1').readOnly = false;
+                            }else{ 
+                                document.getElementById('desbloq').readOnly = true;
+                                document.getElementById('desbloq1').readOnly = true;
+                            
+                            }
+                        }
+                                    
                          </script>
                     
-                     <label for="chec">¿Tienen?<input name="chec" id="chec" onchange="comprobar();" style="form-control; position: absolute; margin-left: 10px;"type="checkbox"></label>  
+                     <label for="chec">¿Pertenece a otra Organización?<input name="chec" id="chec" onchange="comprobar();" style="form-control; position: absolute; margin-left: 10px;"type="checkbox"></label>  
                     <div class="row">
                         <div class="col-sm-4">
 
@@ -208,7 +220,7 @@
                                 
                                 <label for="chec">Organización</label> 
                                  
-                                <input style="width: 140px " type="text" name="text" class="form-control" placeholder="Nombre" id="desbloq" readonly> 
+                                <input style="width: 140px " type="text" name="org" class="form-control" placeholder="Equipo" id="desbloq" readonly> 
                                 
                             </div>
                         </div>
@@ -216,7 +228,7 @@
                     <div class="form-group">
                                 <label for="chec">Liga</label>
                                  <br>
-                                <input style="width: 140px "type="text" name="text"  class="form-control" placeholder="Nombre" id="desbloq1" readonly> 
+                                <input style="width: 140px "type="text" name="liga"  class="form-control" placeholder="Liga de Beisbol" id="desbloq1" readonly> 
                             </div>
                         </div>
                 <!--Footer del modal-->
