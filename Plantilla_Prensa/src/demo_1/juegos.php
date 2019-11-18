@@ -58,7 +58,12 @@ function select_juegos(){
             <br> 
                 <label for="titulo" >Redacción de el reporte</label>
                  <textarea class="ckeditor" id="redaccion" name="redaccion" required></textarea>
-         
+
+                <br> 
+                <br> 
+                <label for="titulo" >Redacción de abridores</label>
+                 <textarea class="ckeditor" id="redaccion_abridores" name="redaccion_abridores" required></textarea>
+
              <br>
                     
                 <input  href="generar_reporte.php" type="submit" class="btn btn-primary btn-lg active" role="button" value="Generar PDF" aria-pressed="true" style="width: 150px" required>

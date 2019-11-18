@@ -29,6 +29,9 @@ include 'functions_pdf.php';
         img {
             max-width: 100%;
         }
+        .contenido-pag {
+            height: 848px;
+        }
         
         /***** PÁGINA 1 *****/
         /* Barra Titulo */
@@ -139,7 +142,7 @@ include 'functions_pdf.php';
         .result-anterior .caja p {
             margin: 10px 0;
         }
-        #barra-inf {
+        #barra-inf1 {
             position: relative;
             top: -4px;
             padding: 25px;
@@ -206,9 +209,16 @@ include 'functions_pdf.php';
             margin: 0;
             line-height: 18px;
         }
-        #barra-inf2 {
+        .barra-inf {
             margin-top: 20px;
             padding: 57px;
+        }
+
+        /***** PÁGINA 2 *****/
+        .cont-pag3 {
+            width: 74%;
+            margin: auto;
+            padding-top: 40px;
         }
     </style>
     <title>Boletin</title>
@@ -286,7 +296,7 @@ include 'functions_pdf.php';
                 </div>
             </div><!--.columna-->
         </div><!--.contenido-->
-        <div class="barra" id="barra-inf"></div>
+        <div class="barra" id="barra-inf1"></div>
     </div>
 
     <!---- PÁGINA 2 ---->
@@ -299,44 +309,66 @@ include 'functions_pdf.php';
                 <img src="Logo M.png" alt="Logo Magallanes">
             </div>
         </div>
-        <div class="sem-roster">
-            <h3 class="mayus">Roster de la Semana</h3>
-        </div>
-
-        <div class="contenido-roster">
-            <div class="titulo-roster">
-                <div class="logo logo-roster">
-                    <img src="Logo M.png" alt="Logo Magallanes">
-                </div>
-                <h4>ROSTER NAVEGANTES DEL MAGALLANES BBC</h4>
+        <div class="contenido-pag">
+            <div class="sem-roster">
+                <h3 class="mayus">Roster de la Semana</h3>
             </div>
-            <table class="roster" border="1">
-                <tr>
-                    <th scope="col">Nº</th>
-                    <th scope="col">NOMBRE</th>
-                    <th scope="col">PO.</th>
-                    <th scope="col">B</th>
-                    <th scope="col">T</th>
-                    <th scope="col">H/W</th>
-                    <th scope="col">Birthday</th>
-                    <th scope="col">Birthplace</th>
-                    <th scope="col">Org.</th>
-                    <th scope="col">League</th>
-                </tr>
-                <?php
-                    roster_week();
-                ?>
-            </table>
-        </div><!--.contenido-roster-->
-
-        <div class="datos-tecnicos">
-            <h4>STAFF TÉCNICO</h4>
-            <p><span>Mánager:</span> Enrique Reyes (50); <span>Coach de Banca:</span> Luis Carlos Rivera (16); <span>Coach de Bateo:</span> 
-            Carlos Mendoza (45); <span>Coach de Primera Base:</span> Nelson Escalona (25); <span>Coach de Tercera Base:</span> 
-            Félix Escalona (53); <span>Coach de Pitcheo: </span>Ramón García (32); <span>Coach de Bullpen: </span>Luis Rodríguez (79); 
-            <span>Catchers de Bullpen: </span>Nabor Jablonskis (74) y Geremi Natera.</p>
-        </div>
-        <div class="barra" id="barra-inf2"></div>
+            
+            <div class="contenido-roster">
+                <div class="titulo-roster">
+                    <div class="logo logo-roster">
+                        <img src="Logo M.png" alt="Logo Magallanes">
+                    </div>
+                    <h4>ROSTER NAVEGANTES DEL MAGALLANES BBC</h4>
+                </div>
+                <table class="roster" border="1">
+                    <tr>
+                        <th scope="col">Nº</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">PO.</th>
+                        <th scope="col">B</th>
+                        <th scope="col">T</th>
+                        <th scope="col">H/W</th>
+                        <th scope="col">Birthday</th>
+                        <th scope="col">Birthplace</th>
+                        <th scope="col">Org.</th>
+                        <th scope="col">League</th>
+                    </tr>
+                    <?php
+                        roster_week();
+                    ?>
+                </table>
+            </div><!--.contenido-roster-->
+            
+            <div class="datos-tecnicos">
+                <h4>STAFF TÉCNICO</h4>
+                <p><span>Mánager:</span> Enrique Reyes (50); <span>Coach de Banca:</span> Luis Carlos Rivera (16); <span>Coach de Bateo:</span> 
+                Carlos Mendoza (45); <span>Coach de Primera Base:</span> Nelson Escalona (25); <span>Coach de Tercera Base:</span> 
+                Félix Escalona (53); <span>Coach de Pitcheo: </span>Ramón García (32); <span>Coach de Bullpen: </span>Luis Rodríguez (79); 
+                <span>Catchers de Bullpen: </span>Nabor Jablonskis (74) y Geremi Natera.</p>
+            </div>
+        </div><!--.contenido-pag-->
+        <div class="barra barra-inf"></div>
     </div><!--.pag-2-->
+
+    <!---- PÁGINA 3 ---->
+    <div class="pag-3">
+        <div class="barra">
+            <h2>ROSTER DE LA SEMANA</h2>
+            <h1>Navegantes del Magallanes</h1>
+            <?php membrete(); ?>
+            <div class="logo">
+                <img src="Logo M.png" alt="Logo Magallanes">
+            </div>
+        </div>
+        
+        <div class="contenido-pag">
+            <div class="cont-pag3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, sunt dolorum rerum reiciendis vel adipisci? Veritatis, dignissimos distinctio sunt, rem quos incidunt iste vel quisquam non corporis laborum necessitatibus nam.</p>
+            </div>
+        </div><!--.contenido-pag-->
+
+        <div class="barra barra-inf"></div>
+    </div><!--.pag-3-->
 </body>
 </html>
