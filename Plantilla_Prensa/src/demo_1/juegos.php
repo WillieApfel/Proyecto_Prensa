@@ -40,9 +40,9 @@ function select_juegos(){
         <form action="generar_reporte.php" method="POST">
             <br>
             <div>
-                <label for="titulo" >Titulo de la noticia</label>
+                <label for="titulo" >Juego del día</label>
                 <br>
-                <select name="juego" class="form-control" style="width: 250px">
+                <select name="juego" class="form-control" style="width: 250px" required>
                     <option value="1"> </option>
                 <?php select_juegos();?>
                 </select>
@@ -50,18 +50,18 @@ function select_juegos(){
             <br>
             <br>
           <div>
-                <label for="titulo">Abridores del Día</label>
-                <input type="text" name="abridores" class="form-control" id="titulo">
+                <label for="titulo">Abridores del día</label>
+                <input type="text" name="abridores" class="form-control" id="titulo" required>
             <br> 
             </div>
-            <div class="form-group">
             <br> 
             <br> 
                 <label for="titulo" >Redacción de el reporte</label>
-                 <textarea class="ckeditor" id="redaccion" name="redaccion"></textarea>
+                 <textarea class="ckeditor" id="redaccion" name="redaccion" required></textarea>
          
              <br>
-        <input href="generar_reporte.php" type="submit" class="btn btn-primary btn-lg active" role="button" value="Generar PDF" aria-pressed="true" style="width: 150px; margin-left: 210px">
+                    
+                <input  href="generar_reporte.php" type="submit" class="btn btn-primary btn-lg active" role="button" value="Generar PDF" aria-pressed="true" style="width: 150px" required>
         
         <br>
         <br>
