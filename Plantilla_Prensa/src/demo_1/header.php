@@ -21,8 +21,7 @@ mysqli_set_charset($connect, "utf8");
     <!-- plugin ckeditor for this page -->
     <script src="ckeditor/ckeditor.js"></script>
     <script src="main.js"></script>
-    <script src="main2.js"></script>
-    
+    <script src="rosterweek.js"></script>
     <!-- inject:css -->
     <link rel="stylesheet" href="../assets/css/shared/style.css">
     <!-- endinject -->

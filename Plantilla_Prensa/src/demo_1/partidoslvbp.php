@@ -21,7 +21,7 @@
                 <br>
                 <form action="partidoslvbo.php" method="POST">
                   <select type="select" name="fecha" class="form-control" id="fecha" onchange="select_fecha(this)" style="position: absolute; width: 200px">
-                  
+                  <option id="0">Seleccionar</option>
                       <?php 
                        select_lvbp_updates();
                   ?>
