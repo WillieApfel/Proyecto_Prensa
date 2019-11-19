@@ -107,35 +107,24 @@ function habilit_week(){
 }
 
 function select_lvbp_updates(){
+
     global $connect, $fecha, $row_temp;  
     $sql= mysqli_query($connect,"SELECT c.*, el.nombrec AS 'local', ev.nombrec AS 'visit' FROM calendario_liga c 
-        INNER JOIN equipos el ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id ORDER BY c.fecha");
+    INNER JOIN equipos el ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id GROUP BY c.fecha ORDER BY c.fecha");
     while($row=mysqli_fetch_array($sql)){
-        
-        echo '<option value="'.$row['fecha'].'">'.custom_dateformat($row['fecha'],2).'</option>';
+
+     echo '<option value="'.$row['fecha'].'">'.custom_dateformat($row['fecha'],2).'</option>';
     }
+
+
+
+
+
+
 }
-
+   
 function show_games(){
-    global $connect, $fecha;
-    /*$sql= mysqli_query($connect,"SELECT c.*, el.nombrec AS 'local', ev.nombrec AS 'visit' FROM calendario_liga c 
-    INNER JOIN equipos el ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id ORDER BY c.fecha");
-    while($row=mysqli_fetch_array($sql)){
-
-
-    $row['id'];
-
-
-    echo "	<tr>
-            <td>".$row['fecha']."</td>
-            <td>".$row['visit']."</td>
-            <td>".$row['carreras_v']."</td>
-            <td>".$row['carreras_hc']."</td>
-            <td>".$row['local']."</td>
-            <td>".$button."</td>
-        </tr>";
-
-    }*/
+    global $connect, $juegos;
 
     $sql= mysqli_query($connect,"SELECT c.*, el.nombrec AS 'local', ev.nombrec AS 'visit' FROM calendario_liga c 
     INNER JOIN equipos el ON c.home_club=el.id INNER JOIN equipos ev ON c.visitante=ev.id ORDER BY c.fecha");
@@ -155,6 +144,7 @@ function show_games(){
 
     }
 }
+
 
 function lable_edit_juegos($obj){
     global $connect;

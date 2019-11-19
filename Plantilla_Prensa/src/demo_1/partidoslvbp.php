@@ -22,7 +22,9 @@
                 <form action="partidoslvbo.php" method="POST">
                   <select type="select" name="fecha" class="form-control" id="fecha" onchange="select_fecha(this)" style="position: absolute; width: 200px">
                   
-                      <?php select_lvbp_updates(); ?>
+                      <?php 
+                       select_lvbp_updates();
+                  ?>
                     
                   </select>
                 </form>
@@ -36,21 +38,16 @@
                     <tr>
                         <th>Fecha:</th>
                         <th>Visitante</th>
-                        <th>Carreras Visitante</th>
-                        <th>Carreras Home Club</th>
+                        <th>Resultado</th>
                         <th>Home Club</th>
                         <th>Configuracion</th>
+                        
 
                     </tr>
-                    <?php 
-                      /*$sql = "SELECT * FROM  calendario_liga c WHERE c.fecha=";
-                      $result = mysqli_query($connect, $sql);
-                      while ($row = mysqli_fetch_assoc($result)){
-                        echo '<option value="'. $row["id"] .'">'. $row["nombre"] .'</option>';
-                      }*/
-                      show_games();
-                        
-                    ?>
+                    <tbody id="calendario_liga">
+                                    
+                    </tbody>
+                
                 </table>
               </div>       
                       
