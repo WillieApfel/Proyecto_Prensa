@@ -1,6 +1,7 @@
 <?php include('header.php');
 
 
+
 ?>
   <div class="main-panel">
           <div class="content-wrapper">
@@ -18,38 +19,38 @@
                 <label for="titulo" style="font-size: 25px">Fecha de la jornada</label>
               
                 <br>
-              
-                <select type="select" class="form-control" id="dia" style="position: absolute; width: 200px">
-                     <option value="1"> </option>
-                   
-              </select>
-              
-               <br>
+                <form action="partidoslvbo.php" method="POST">
+                  <select type="select" name="fecha" class="form-control" id="fecha" onchange="select_fecha(this)" style="position: absolute; width: 200px">
+                  
+                      <?php select_lvbp_updates(); ?>
+                    
+                  </select>
+                </form>
+                
+                <br>
             <div id="contenido">
+          
              
               <table id="datatables-example" class="table table-striped table-bordered table-responsive" width="100%" cellspacing="0" style="margin-top: 40px">
                     
                     <tr>
-                         <td>Home Club</td>
-                         <td>Carreras Home Club</td>
-                         <td>Carreras Visitante</td>
-                         <td>Visitante</td>
+                        <th>Fecha:</th>
+                        <th>Visitante</th>
+                        <th>Carreras Visitante</th>
+                        <th>Carreras Home Club</th>
+                        <th>Home Club</th>
+                        <th>Configuracion</th>
+
                     </tr>
                     <?php 
-                        $sql= "SELECT `home_club`, `visitante`, `carreras_hc`, `carreras_v` FROM `calendario_liga` ";
-                        $resultado=mysqli_query($connect,$sql);
-                        while($mostrar=mysqli_fetch_array($resultado)) 
-                        { ?>
-                               <tr>
-                                    <td><?php  echo $mostrar['home_club']?></td>
-                                    <td><?php  echo $mostrar['carreras_hc']?></td>
-                                    <td><?php  echo $mostrar['carreras_v']?></td>
-                                    <td><?php  echo $mostrar['visitante']?></td>
-                                </tr>
-                            
-                             <?php 
-                            }
-                        ?>
+                      /*$sql = "SELECT * FROM  calendario_liga c WHERE c.fecha=";
+                      $result = mysqli_query($connect, $sql);
+                      while ($row = mysqli_fetch_assoc($result)){
+                        echo '<option value="'. $row["id"] .'">'. $row["nombre"] .'</option>';
+                      }*/
+                      show_games();
+                        
+                    ?>
                 </table>
               </div>       
                       

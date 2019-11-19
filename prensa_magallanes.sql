@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-11-2019 a las 00:19:53
+-- Tiempo de generación: 19-11-2019 a las 01:23:19
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -69,81 +69,82 @@ CREATE TABLE `calendario_liga` (
   `visitante` int(2) NOT NULL,
   `carreras_hc` int(2) NOT NULL,
   `carreras_v` int(2) NOT NULL,
-  `temp` char(2) COLLATE utf8_spanish_ci NOT NULL
+  `temp` char(2) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `calendario_liga`
 --
 
-INSERT INTO `calendario_liga` (`id`, `fecha`, `hora`, `home_club`, `visitante`, `carreras_hc`, `carreras_v`, `temp`) VALUES
-(1, '2019-11-05', '18:00:00', 1, 3, 3, 2, '1'),
-(2, '2019-11-06', '18:00:00', 1, 2, 4, 9, '1'),
-(3, '2019-11-07', '18:00:00', 6, 1, 8, 3, '1'),
-(4, '2019-11-08', '18:00:00', 1, 4, 5, 1, '1'),
-(5, '2019-11-09', '16:00:00', 4, 1, 13, 9, '1'),
-(6, '2019-11-10', '17:30:00', 1, 2, 4, 5, '1'),
-(7, '2019-11-12', '18:00:00', 1, 5, 4, 3, '1'),
-(8, '2019-11-13', '18:00:00', 1, 5, 7, 4, '1'),
-(9, '2019-11-14', '18:00:00', 1, 6, 0, 0, '1'),
-(10, '2019-11-15', '18:00:00', 3, 1, 0, 0, '1'),
-(11, '2019-11-16', '18:00:00', 3, 1, 0, 0, '1'),
-(12, '2019-11-17', '17:00:00', 3, 1, 0, 0, '1'),
-(13, '2019-11-19', '18:00:00', 1, 8, 0, 0, '1'),
-(14, '2019-11-20', '18:00:00', 7, 1, 0, 0, '1'),
-(15, '2019-11-21', '18:00:00', 1, 7, 0, 0, '1'),
-(16, '2019-11-22', '18:00:00', 4, 1, 0, 0, '1'),
-(17, '2019-11-23', '17:30:00', 1, 3, 0, 0, '1'),
-(18, '2019-11-24', '18:00:00', 1, 2, 0, 0, '1'),
-(19, '2019-11-26', '00:00:00', 6, 1, 0, 0, '1'),
-(20, '2019-11-27', '00:00:00', 7, 1, 0, 0, '1'),
-(21, '2019-11-28', '00:00:00', 1, 6, 0, 0, '1'),
-(22, '2019-11-29', '00:00:00', 1, 4, 0, 0, '1'),
-(23, '2019-11-30', '00:00:00', 8, 1, 0, 0, '1'),
-(24, '2019-12-01', '00:00:00', 6, 1, 0, 0, '1'),
-(25, '2019-12-04', '00:00:00', 8, 1, 0, 0, '1'),
-(26, '2019-12-06', '00:00:00', 1, 6, 0, 0, '1'),
-(27, '2019-12-07', '00:00:00', 5, 1, 0, 0, '1'),
-(28, '2019-12-08', '00:00:00', 5, 1, 0, 0, '1'),
-(29, '2019-12-09', '00:00:00', 5, 1, 0, 0, '1'),
-(30, '2019-12-11', '00:00:00', 1, 8, 0, 0, '1'),
-(31, '2019-12-12', '00:00:00', 7, 1, 0, 0, '1'),
-(32, '2019-12-13', '00:00:00', 1, 7, 0, 0, '1'),
-(33, '2019-12-14', '00:00:00', 2, 1, 0, 0, '1'),
-(34, '2019-12-15', '00:00:00', 2, 1, 0, 0, '1'),
-(35, '2019-12-16', '00:00:00', 2, 1, 0, 0, '1'),
-(36, '2019-12-18', '00:00:00', 1, 3, 0, 0, '1'),
-(37, '2019-12-20', '00:00:00', 1, 4, 0, 0, '1'),
-(38, '2019-11-21', '00:00:00', 4, 1, 0, 0, '1'),
-(39, '2019-12-22', '00:00:00', 1, 8, 0, 0, '1'),
-(40, '2019-12-27', '00:00:00', 8, 1, 0, 0, '1'),
-(41, '2019-12-28', '00:00:00', 1, 5, 0, 0, '1'),
-(42, '2019-12-29', '00:00:00', 1, 7, 0, 0, '1'),
-(43, '2019-11-05', '00:00:00', 6, 8, 3, 6, '1'),
-(44, '2019-11-05', '00:00:00', 4, 2, 5, 3, '1'),
-(45, '2019-11-05', '00:00:00', 5, 7, 3, 5, '1'),
-(46, '2019-11-06', '00:00:00', 5, 7, 13, 4, '1'),
-(47, '2019-11-06', '00:00:00', 4, 3, 3, 4, '1'),
-(48, '2019-11-06', '00:00:00', 8, 6, 3, 2, '1'),
-(49, '2019-11-07', '00:00:00', 4, 3, 8, 0, '1'),
-(50, '2019-11-07', '00:00:00', 5, 7, 11, 13, '1'),
-(51, '2019-11-07', '00:00:00', 8, 2, 4, 6, '1'),
-(52, '2019-11-08', '00:00:00', 7, 2, 3, 4, '1'),
-(53, '2019-11-08', '00:00:00', 8, 3, 6, 2, '1'),
-(54, '2019-11-08', '00:00:00', 5, 6, 2, 5, '1'),
-(55, '2019-11-09', '00:00:00', 7, 2, 2, 3, '1'),
-(56, '2019-11-09', '00:00:00', 8, 3, 1, 2, '1'),
-(57, '2019-11-09', '00:00:00', 5, 6, 15, 2, '1'),
-(58, '2019-11-10', '00:00:00', 7, 3, 3, 13, '1'),
-(59, '2019-11-10', '00:00:00', 8, 4, 2, 3, '1'),
-(60, '2019-11-10', '00:00:00', 5, 6, 5, 4, '1'),
-(61, '2019-11-12', '00:00:00', 2, 8, 3, 5, '1'),
-(62, '2019-11-12', '00:00:00', 6, 7, 10, 6, '1'),
-(63, '2019-11-12', '00:00:00', 3, 4, 4, 8, '1'),
-(64, '2019-11-13', '00:00:00', 2, 8, 3, 2, '1'),
-(65, '2019-11-13', '00:00:00', 7, 6, 3, 2, '1'),
-(66, '2019-11-13', '00:00:00', 3, 4, 2, 3, '1'),
-(67, '2019-11-13', '00:00:00', 2, 8, 4, 3, '1');
+INSERT INTO `calendario_liga` (`id`, `fecha`, `hora`, `home_club`, `visitante`, `carreras_hc`, `carreras_v`, `temp`, `status`) VALUES
+(1, '2019-11-05', '18:00:00', 1, 3, 3, 2, '1', 1),
+(2, '2019-11-06', '18:00:00', 1, 2, 4, 9, '1', 1),
+(3, '2019-11-07', '18:00:00', 6, 1, 8, 3, '1', 1),
+(4, '2019-11-08', '18:00:00', 1, 4, 5, 1, '1', 1),
+(5, '2019-11-09', '16:00:00', 4, 1, 13, 9, '1', 1),
+(6, '2019-11-10', '17:30:00', 1, 2, 4, 5, '1', 1),
+(7, '2019-11-12', '18:00:00', 1, 5, 4, 3, '1', 1),
+(8, '2019-11-13', '18:00:00', 1, 5, 7, 4, '1', 1),
+(9, '2019-11-14', '18:00:00', 1, 6, 6, 1, '1', 1),
+(10, '2019-11-15', '18:00:00', 3, 1, 0, 0, '1', 1),
+(11, '2019-11-16', '18:00:00', 3, 1, 0, 0, '1', 1),
+(12, '2019-11-17', '17:00:00', 3, 1, 0, 0, '1', 1),
+(13, '2019-11-19', '18:00:00', 1, 8, 0, 0, '1', 1),
+(14, '2019-11-20', '18:00:00', 7, 1, 0, 0, '1', 1),
+(15, '2019-11-21', '18:00:00', 1, 7, 0, 0, '1', 1),
+(16, '2019-11-22', '18:00:00', 4, 1, 0, 0, '1', 1),
+(17, '2019-11-23', '17:30:00', 1, 3, 0, 0, '1', 1),
+(18, '2019-11-24', '18:00:00', 1, 2, 0, 0, '1', 1),
+(19, '2019-11-26', '00:00:00', 6, 1, 0, 0, '1', 1),
+(20, '2019-11-27', '00:00:00', 7, 1, 0, 0, '1', 1),
+(21, '2019-11-28', '00:00:00', 1, 6, 0, 0, '1', 1),
+(22, '2019-11-29', '00:00:00', 1, 4, 0, 0, '1', 1),
+(23, '2019-11-30', '00:00:00', 8, 1, 0, 0, '1', 1),
+(24, '2019-12-01', '00:00:00', 6, 1, 0, 0, '1', 1),
+(25, '2019-12-04', '00:00:00', 8, 1, 0, 0, '1', 1),
+(26, '2019-12-06', '00:00:00', 1, 6, 0, 0, '1', 1),
+(27, '2019-12-07', '00:00:00', 5, 1, 0, 0, '1', 1),
+(28, '2019-12-08', '00:00:00', 5, 1, 0, 0, '1', 1),
+(29, '2019-12-09', '00:00:00', 5, 1, 0, 0, '1', 1),
+(30, '2019-12-11', '00:00:00', 1, 8, 0, 0, '1', 1),
+(31, '2019-12-12', '00:00:00', 7, 1, 0, 0, '1', 1),
+(32, '2019-12-13', '00:00:00', 1, 7, 0, 0, '1', 1),
+(33, '2019-12-14', '00:00:00', 2, 1, 0, 0, '1', 1),
+(34, '2019-12-15', '00:00:00', 2, 1, 0, 0, '1', 1),
+(35, '2019-12-16', '00:00:00', 2, 1, 0, 0, '1', 1),
+(36, '2019-12-18', '00:00:00', 1, 3, 0, 0, '1', 1),
+(37, '2019-12-20', '00:00:00', 1, 4, 0, 0, '1', 1),
+(38, '2019-11-21', '00:00:00', 4, 1, 0, 0, '1', 1),
+(39, '2019-12-22', '00:00:00', 1, 8, 0, 0, '1', 1),
+(40, '2019-12-27', '00:00:00', 8, 1, 0, 0, '1', 1),
+(41, '2019-12-28', '00:00:00', 1, 5, 0, 0, '1', 1),
+(42, '2019-12-29', '00:00:00', 1, 7, 0, 0, '1', 1),
+(43, '2019-11-05', '00:00:00', 6, 8, 3, 6, '1', 1),
+(44, '2019-11-05', '00:00:00', 4, 2, 5, 3, '1', 1),
+(45, '2019-11-05', '00:00:00', 5, 7, 3, 5, '1', 1),
+(46, '2019-11-06', '00:00:00', 5, 7, 13, 4, '1', 1),
+(47, '2019-11-06', '00:00:00', 4, 3, 3, 4, '1', 1),
+(48, '2019-11-06', '00:00:00', 8, 6, 3, 2, '1', 1),
+(49, '2019-11-07', '00:00:00', 4, 3, 8, 0, '1', 1),
+(50, '2019-11-07', '00:00:00', 5, 7, 11, 13, '1', 1),
+(51, '2019-11-07', '00:00:00', 8, 2, 4, 6, '1', 1),
+(52, '2019-11-08', '00:00:00', 7, 2, 3, 4, '1', 1),
+(53, '2019-11-08', '00:00:00', 8, 3, 6, 2, '1', 1),
+(54, '2019-11-08', '00:00:00', 5, 6, 2, 5, '1', 1),
+(55, '2019-11-09', '00:00:00', 7, 2, 2, 3, '1', 1),
+(56, '2019-11-09', '00:00:00', 8, 3, 1, 2, '1', 1),
+(57, '2019-11-09', '00:00:00', 5, 6, 15, 2, '1', 1),
+(58, '2019-11-10', '00:00:00', 7, 3, 3, 13, '1', 1),
+(59, '2019-11-10', '00:00:00', 8, 4, 2, 3, '1', 1),
+(60, '2019-11-10', '00:00:00', 5, 6, 5, 4, '1', 1),
+(61, '2019-11-12', '00:00:00', 2, 8, 3, 5, '1', 1),
+(62, '2019-11-12', '00:00:00', 6, 7, 10, 6, '1', 1),
+(63, '2019-11-12', '00:00:00', 3, 4, 4, 8, '1', 1),
+(64, '2019-11-13', '00:00:00', 2, 8, 3, 2, '1', 1),
+(65, '2019-11-13', '00:00:00', 7, 6, 3, 2, '1', 1),
+(66, '2019-11-13', '00:00:00', 3, 4, 2, 3, '1', 1),
+(67, '2019-11-13', '00:00:00', 2, 8, 4, 3, '1', 1);
 
 -- --------------------------------------------------------
 
@@ -247,6 +248,7 @@ CREATE TABLE `redaccion` (
   `id` int(11) NOT NULL,
   `redaccion` longtext COLLATE utf8_spanish_ci NOT NULL,
   `abridores` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `duelo` longtext COLLATE utf8_spanish_ci NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -254,19 +256,8 @@ CREATE TABLE `redaccion` (
 -- Volcado de datos para la tabla `redaccion`
 --
 
-INSERT INTO `redaccion` (`id`, `redaccion`, `abridores`, `fecha`) VALUES
-(1, '<p><code>hzdgfjhsgfsfshfuisf</code></p>\r\n', '', '0000-00-00'),
-(2, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-20'),
-(3, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n\r\n<p>just combine the value and the stud_name e.g. 1_sre and split the value when get it into php. Javascript seems like hammer to crack a nut. N.B. this method assumes you can edit the the html. Here is what the html might look like:</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-22'),
-(4, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n\r\n<p>just combine the value and the stud_name e.g. 1_sre and split the value when get it into php. Javascript seems like hammer to crack a nut. N.B. this method assumes you can edit the the html. Here is what the html might look like:</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-06'),
-(5, '<p>mnafbhasvfasfjabshfafuADHJKdf</p>\r\n\r\n<p>just combine the value and the stud_name e.g. 1_sre and split the value when get it into php. Javascript seems like hammer to crack a nut. N.B. this method assumes you can edit the the html. Here is what the html might look like:</p>\r\n', 'hzvhbdkfjsahfbvsaf', '2019-11-08'),
-(6, '<p>YUHGFCJJFTHGHJVGHFFYJ</p>\r\n', 'tu mama fue mia', '2019-11-05'),
-(7, '<p>hgeuifefjiwhefugfoiwhf</p>\r\n', 'Yohan Pino (G=2 P3) vs Junior Guerra (G=2 P3)', '2019-11-09'),
-(8, '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', 'Yohan vs Junior Guerra', '2019-11-07'),
-(9, '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', 'Yohan vs Junior Guerra', '2019-11-10'),
-(10, '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', 'Yohan Pena vs Junior Guerra', '2019-11-12'),
-(11, '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', 'Yohan Pena vs Junior Guerra', '2019-11-12'),
-(12, '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', 'Yohan Pena vs Junior Guerra', '2019-11-13');
+INSERT INTO `redaccion` (`id`, `redaccion`, `abridores`, `duelo`, `fecha`) VALUES
+(16, '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', 'Yohan vs Junior Guerra', '', '2019-11-05');
 
 -- --------------------------------------------------------
 
@@ -328,9 +319,7 @@ INSERT INTO `roster` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos_sec`, 
 (29, 'Eduard', 'Reyes', 9, 'RHP', '', 'R', 'R', 6, 0, 175, '1990-08-23', 'Bonao, R.D.', 'Jackals', 'Can-Am Assoc.'),
 (30, 'Adrián', 'Salcedo', 92, 'RHP', '', 'R', 'R', 6, 4, 200, '1991-02-05', 'Moca, R.D.', 'Baycats', 'IBL'),
 (31, 'Edgar', 'Muñoz', 77, 'INF', '', 'R', 'R', 5, 9, 150, '1991-10-30', 'Cristobal, Panamá', 'Algodoneros', 'LMB'),
-(32, 'Rosa', 'Garabez', 65, 'INF', '', 'R', 'R', 6, 2, 165, '1989-10-12', 'Higüey, R.D.', 'Leones', 'LMB'),
-(33, 'Willie', 'Manzano', 16, 'SS', 'INF', 'R', 'R', 6, 1, 185, '1999-01-26', 'Valencia, Carabobo', '', ''),
-(34, 'Carlos', 'Zapata', 69, 'INF', 'C', 'R', 'R', 6, 3, 150, '1999-02-17', 'Valencia, Carabobo', 'Lecheros', 'Culo Americano');
+(32, 'Rosa', 'Garabez', 65, 'INF', '', 'R', 'R', 6, 2, 165, '1989-10-12', 'Higüey, R.D.', 'Leones', 'LMB');
 
 -- --------------------------------------------------------
 
@@ -444,38 +433,38 @@ INSERT INTO `roster_week` (`id`, `jugador`, `semana_inicio`, `semana_fin`) VALUE
 (30, 30, '2019-11-11', '2019-11-17'),
 (31, 31, '2019-11-11', '2019-11-17'),
 (32, 32, '2019-11-11', '2019-11-17'),
-(225, 1, '2019-11-04', '2019-11-10'),
-(226, 2, '2019-11-04', '2019-11-10'),
-(227, 3, '2019-11-04', '2019-11-10'),
-(228, 4, '2019-11-04', '2019-11-10'),
-(229, 5, '2019-11-04', '2019-11-10'),
-(230, 6, '2019-11-04', '2019-11-10'),
-(231, 7, '2019-11-04', '2019-11-10'),
-(232, 8, '2019-11-04', '2019-11-10'),
-(233, 9, '2019-11-04', '2019-11-10'),
-(234, 10, '2019-11-04', '2019-11-10'),
-(235, 11, '2019-11-04', '2019-11-10'),
-(236, 12, '2019-11-04', '2019-11-10'),
-(237, 13, '2019-11-04', '2019-11-10'),
-(238, 14, '2019-11-04', '2019-11-10'),
-(239, 15, '2019-11-04', '2019-11-10'),
-(240, 16, '2019-11-04', '2019-11-10'),
-(241, 17, '2019-11-04', '2019-11-10'),
-(242, 18, '2019-11-04', '2019-11-10'),
-(243, 19, '2019-11-04', '2019-11-10'),
-(244, 20, '2019-11-04', '2019-11-10'),
-(245, 21, '2019-11-04', '2019-11-10'),
-(246, 22, '2019-11-04', '2019-11-10'),
-(247, 23, '2019-11-04', '2019-11-10'),
-(248, 24, '2019-11-04', '2019-11-10'),
-(249, 25, '2019-11-04', '2019-11-10'),
-(250, 26, '2019-11-04', '2019-11-10'),
-(251, 27, '2019-11-04', '2019-11-10'),
-(252, 28, '2019-11-04', '2019-11-10'),
-(253, 29, '2019-11-04', '2019-11-10'),
-(254, 30, '2019-11-04', '2019-11-10'),
-(255, 31, '2019-11-04', '2019-11-10'),
-(256, 32, '2019-11-04', '2019-11-10');
+(33, 1, '2019-11-04', '2019-11-10'),
+(34, 2, '2019-11-04', '2019-11-10'),
+(35, 3, '2019-11-04', '2019-11-10'),
+(36, 4, '2019-11-04', '2019-11-10'),
+(37, 5, '2019-11-04', '2019-11-10'),
+(38, 6, '2019-11-04', '2019-11-10'),
+(39, 7, '2019-11-04', '2019-11-10'),
+(40, 8, '2019-11-04', '2019-11-10'),
+(41, 9, '2019-11-04', '2019-11-10'),
+(42, 10, '2019-11-04', '2019-11-10'),
+(43, 11, '2019-11-04', '2019-11-10'),
+(44, 12, '2019-11-04', '2019-11-10'),
+(45, 13, '2019-11-04', '2019-11-10'),
+(46, 14, '2019-11-04', '2019-11-10'),
+(47, 15, '2019-11-04', '2019-11-10'),
+(48, 16, '2019-11-04', '2019-11-10'),
+(49, 17, '2019-11-04', '2019-11-10'),
+(50, 18, '2019-11-04', '2019-11-10'),
+(51, 19, '2019-11-04', '2019-11-10'),
+(52, 20, '2019-11-04', '2019-11-10'),
+(53, 21, '2019-11-04', '2019-11-10'),
+(54, 22, '2019-11-04', '2019-11-10'),
+(55, 23, '2019-11-04', '2019-11-10'),
+(56, 24, '2019-11-04', '2019-11-10'),
+(57, 25, '2019-11-04', '2019-11-10'),
+(58, 26, '2019-11-04', '2019-11-10'),
+(59, 27, '2019-11-04', '2019-11-10'),
+(60, 28, '2019-11-04', '2019-11-10'),
+(61, 29, '2019-11-04', '2019-11-10'),
+(62, 30, '2019-11-04', '2019-11-10'),
+(63, 31, '2019-11-04', '2019-11-10'),
+(64, 32, '2019-11-04', '2019-11-10');
 
 -- --------------------------------------------------------
 
@@ -604,13 +593,13 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `redaccion`
 --
 ALTER TABLE `redaccion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `roster`
 --
 ALTER TABLE `roster`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `roster_equipo`
@@ -622,7 +611,7 @@ ALTER TABLE `roster_equipo`
 -- AUTO_INCREMENT de la tabla `roster_week`
 --
 ALTER TABLE `roster_week`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=257;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de la tabla `temporada`

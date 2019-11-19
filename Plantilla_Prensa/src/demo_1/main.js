@@ -1,9 +1,9 @@
-function select_equipos(obj) {
+function select_fecha(obj) {
 $.ajax({
-url: "select_equipos.php?ie=" + obj.options[obj.selectedIndex].value,
+url: "select_fecha.php?f=" + obj.options[obj.selectedIndex].value,
 success: function (result) {
 console.log(result)
-$("#jugadores").html(result);
+$("#fecha").html(result);
 }
 });
 }

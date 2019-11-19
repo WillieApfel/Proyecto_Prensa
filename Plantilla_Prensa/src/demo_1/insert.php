@@ -17,8 +17,16 @@ $b_day=$_POST['b_day'];
 $b_place=$_POST['b_place'];
 $bat=$_POST['bat'];
 $throw=$_POST['throw'];
-$org=$_POST['org'];
-$liga=$_POST['liga'];
+if($_POST['org']==''){
+    $org='-';
+}else{
+    $org=$_POST['org'];
+}
+if($_POST['liga']==''){
+    $liga='-';
+}else{
+    $liga=$_POST['liga'];
+}
 
 $insert = mysqli_query($connect,"INSERT INTO `roster` (`id`, `nombre`, `apellido`, `nro`, `posicion`, `pos_sec`, 
     `bat`, `throw`, `h_feet`, `h_inches`, `w_lbs`, `birthday`, `birthplace`, `org`, `liga`) VALUES (NULL, '$nombre', 

@@ -1,5 +1,8 @@
 <?php
 include 'connect.php';
+include '..\..\..\functions_forms.php';
+mysqli_set_charset($connect, "utf8");
+
 ?>
 <html lang="es">
   <head>
@@ -17,6 +20,7 @@ include 'connect.php';
     <!-- endinject -->
     <!-- plugin ckeditor for this page -->
     <script src="ckeditor/ckeditor.js"></script>
+    
     <!-- inject:css -->
     <link rel="stylesheet" href="../assets/css/shared/style.css">
     <!-- endinject -->

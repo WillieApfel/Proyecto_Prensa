@@ -1,5 +1,5 @@
 <?php
-include "../connection.php";
+/*include "../connection.php";
 $altura = $_POST['pies'] . $_POST['pulgadas'];
 echo $altura;
 if($_FILES['imagen1']['name'] != ""){
@@ -33,5 +33,5 @@ if ($result) {
 	die();
 }else {
 	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+}*/
 ?>

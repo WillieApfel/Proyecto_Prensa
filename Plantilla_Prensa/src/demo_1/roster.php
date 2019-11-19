@@ -68,7 +68,7 @@ include '..\..\..\functions_forms.php';
                 <h4 class="modal-title">Nuevo Jugador</h4>
             </div>
             <!--Body del Modal con formulario-->
-            <form method="POST" action="roster.php" enctype="multipart/form-data">
+            <form method="POST" action="insert.php" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-4">
