@@ -38,15 +38,42 @@
             </div>
             <br> 
             <br> 
-                <label for="titulo" >Redacción de el reporte</label>
+                <label for="titulo" >Redacción del reporte</label>
                  <textarea class="ckeditor" id="redaccion" name="redaccion" required></textarea>
 
                 <br> 
                 <br> 
-                <label for="titulo" >Redacción de abridores</label>
+                <label for="titulo" >Redacción de los abridores</label>
                  <textarea class="ckeditor" id="redaccion_abridores" name="redaccion_abridores" required></textarea>
 
              <br>
+             <br>
+            
+             <label for="titulo">Arbitros</label>
+             <br>
+        <br>
+            <label for="titulo">H.P.: </label>
+              <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros1" style="margin-left: 20px; width: 300px">
+             <br>
+        <br>
+            <label for="titulo">1.B.: </label>
+              <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros2" style="margin-left: 20px; width: 300px">
+             <br>
+        <br>
+            <label for="titulo">2.B.: </label>
+              <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros3" style="margin-left: 20px; width: 300px">
+             <br>
+        <br>
+            <label for="titulo">3.B.: </label>
+              <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros4" style="margin-left: 20px; width: 300px">
+             <br>
+        <br>
+            <label for="titulo">R.V.: </label>
+              <input type="text" class="form-control" placeholder="Nombre y Apellido" id="arbitros5" style="margin-left: 20px; width: 300px">
+             <br>
+             <br>
+            <br>
+        
                     
                 <input  href="generar_reporte.php" type="submit" class="btn btn-primary btn-lg active" role="button" value="Generar PDF" aria-pressed="true" style="width: 150px" required>
         

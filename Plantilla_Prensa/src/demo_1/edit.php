@@ -5,17 +5,20 @@ $array = lable_edit_juegos($_GET['id']);
 ?>
 <!-- plugins -->
 <link rel="stylesheet" type="text/css" href="../asset/css/plugins/datatables.bootstrap.min.css" />
-
 <!-- start: Content -->
-<div id="content">
-	<div class="panel box-shadow-none content-header" style="width = 200px">
-		<div class="panel-body">
-			<div class="col-md-12">
-				<h3 class="animated fadeInLeft">Editar Juego</h3>
-				</div>
-		</div>
-	</div>
-	<div class="col-md-12 top-20 padding-0">
+<div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Starts-->
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="page-header">
+                  <h4 class="title">Editar</h4>
+                  <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+                  </div>
+                </div>
+              </div>
+            </div> 
+<div class="col-md-12 top-20 padding-0">
 		<div class="col-md-12">
 			<div class="panel">
 				<div class="panel-heading">
@@ -31,7 +34,7 @@ $array = lable_edit_juegos($_GET['id']);
                			<br>
 						<div class="row">
 							<div class="col-sm-4">
-				<label name="OS" class="form-control"  placeholder="Equipo Visitante" style="align: center; margin-top: 10px; border-color: transparent; width: 250px; font-size: 15px; position: absolute"> <?php echo $array[0]; ?> </label>
+				<label name="OS" class="form-control"  placeholder="Equipo Visitante" style="align: center; margin-top: 10px; border-color: transparent; background-color: transparent; width: 250px; font-size: 15px; position: absolute"> <?php echo $array[0]; ?> </label>
                 
                 <input type="number" name="carreras_v" id="carreras_v" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 230px; position: absolute"> 
 				
@@ -39,17 +42,34 @@ $array = lable_edit_juegos($_GET['id']);
 
                 <input type="number" name="carreras_hc" id="carreras_hc" class="form-control" placeholder="0" id="resultados" style="width: 80px; margin-left: 380px; position: absolute">
 
-				<label name="OS" class="form-control" placeholder="Equipo Local" style="align: center; margin-top: 10px; border-color: transparent; width: 250px; margin-left: 460px; font-size: 15px;  position: absolute"><?php echo $array[1]; ?></label>
+				<label name="OS" class="form-control" placeholder="Equipo Local" style="align: center; margin-top: 10px; border-color: transparent; background-color: transparent; width: 250px; margin-left: 460px; font-size: 15px;  position: absolute"><?php echo $array[1]; ?></label>
 				<input type="hidden" name="id" id="id" value=<?php echo '"'.$_GET['id'].'"'?>/>
                 <br>
+                <br>
+               
+                     <script>            
+                    function validaNumericos(event) {
+                    if(event.charCode >= 48 && event.charCode <= 57){
+                    return true;
+                    }
+                    return false;        
+                        }
+                          </script>  
+                                
+                <label for="titulo"  style="margin-left: 15px; width: 250px;  position: absolute">Asistencia: </label>
+            <input class="form-control" onkeypress="return validaNumericos(event)" style="margin-left: 100px; position: absolute; width: 250px" type="text" placeholder="Asistencia">
+               <br>                 
+                <br>
+             <label for="titulo"  style="margin-left: 15px; width: 250px;  position: absolute">Duración: </label>
+            <input class="form-control" style="margin-left: 100px; position: absolute; width: 250px" type="time">
                 <br>
                 <br>
               
                  <input type="submit" href="update_game.php" class="btn btn-primary btn-lg active" role="button" value="Guardar" aria-pressed="true" style="width: 150px"/>
         
             </div>
-        				</form>
-				</div>
+            </form>
+            </div>
 			</div>
 		</div>
 	</div>

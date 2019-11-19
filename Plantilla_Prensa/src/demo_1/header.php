@@ -70,10 +70,10 @@ mysqli_set_charset($connect, "utf8");
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <nav  class="sidebar sidebar-offcanvas" id="sidebar">
              <br>
              <br>
-        <ul class="nav">
+        <ul style="position:fixed; width: 268px" class="nav">
             <li class="nav-item nav-category">Menu</li>
             <li class="nav-item">
               <a class="nav-link" href="inicio.php">
@@ -85,17 +85,14 @@ mysqli_set_charset($connect, "utf8");
             <div class="nav-item">
               <a class="nav-link" data-toggle="collapse" type="selector" href="#ui-basic1" aria-expanded="false" aria-controls="#ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
-                <span class="menu-title">Generador de PDF</span>
+                <span class="menu-title">PDF</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="ui-basic1">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="juegos.php">Noticias</a>
+                    <a class="nav-link" href="juegos.php">Generar</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="resultados.php">Resultados</a>
-                  </li> 
                 </ul>
               </div>
             </div>
@@ -108,18 +105,13 @@ mysqli_set_charset($connect, "utf8");
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Calendario Magallanes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Calendario LVBP</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="resultados.php">Resultados Magallanes</a>
+                     <li class="nav-item">
+                    <a class="nav-link" href="calendariolvbp.php">Enfrentamientos</a>
                   </li> 
                   <li class="nav-item">
-                    <a class="nav-link" href="partidoslvbp.php">Resultados LVBP</a>
+                    <a class="nav-link" href="partidoslvbp.php">Calendario</a>
                   </li>
+                 
                 </ul>
               </div>
             </div>
