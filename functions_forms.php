@@ -154,4 +154,46 @@ function lable_edit_juegos($obj){
 
     return array($row['visit'],$row['local']);
 }
+
+function select_week(){
+    global $connect;
+    $sql = mysqli_query($connect, "SELECT rw.semana_inicio, rw.semana_fin FROM roster_week rw GROUP BY rw.semana_inicio");
+    while ($row = mysqli_fetch_array($sql)){
+        echo '<option value="'.$row['semana_inicio'].'">'.custom_dateformat($row['semana_inicio'], 2)." - ".custom_dateformat($row['semana_fin'], 2).'</option>';
+    }
+}
+
+function show_week($fecha){
+    global $connect;
+    $sql = mysqli_query($connect, "SELECT rw.semana_inicio, rw.semana_fin FROM roster_week rw GROUP BY rw.semana_inicio");
+    while ($row = mysqli_fetch_array($sql)){
+        echo '<option value="'.$row['semana_inicio'].'">'.custom_dateformat($row['semana_inicio'], 2)." - ".custom_dateformat($row['semana_fin'], 2).'</option>';
+    }
+    while($row=mysqli_fetch_array($sql)) { 
+        echo"<tr>
+                <td>".$row['nro']."</td>
+                <td>".$row['nombre']." ".$row['apellido']."</td>
+                <td>".$posicion."</td>
+                <td>".$row['bat']."/".$row['throw']."</td>
+                <td>".$row['h_feet']."'".$row['h_inches'].'"/'.$row['w_lbs']."</td>
+                <td>".custom_dateformat($row['birthday'],2)."</td>
+                <td>".$row['birthplace']."</td>
+                <td>".$row['org']."</td>
+                <td>".$row['liga']."</td>
+            </tr>";
+    }
+}
+
+function search_player() {
+    global $connect;
+    $sql = mysqli_query($connect, "SELECT * FROM roster r WHERE r.nombre LIKE '%".$_POST['search']."' AND r.apellido LIKE '%".$_POST['search']."'");
+    echo '<tr>
+            <td>Nombre y Apellido</td>
+        </tr>';
+    while ($row = mysqli_fetch_array($sql)) {
+        echo '<tr>
+            <td>'.$row['nombre']." ".$row['apellido'].'</td>
+        </tr>';
+    }
+}
 ?>

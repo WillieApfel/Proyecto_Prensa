@@ -21,6 +21,7 @@ mysqli_set_charset($connect, "utf8");
     <!-- plugin ckeditor for this page -->
     <script src="ckeditor/ckeditor.js"></script>
     <script src="main.js"></script>
+    <script src="main2.js"></script>
     
     <!-- inject:css -->
     <link rel="stylesheet" href="../assets/css/shared/style.css">
@@ -130,7 +131,7 @@ mysqli_set_charset($connect, "utf8");
                     <a class="nav-link" href="roster.php">Roster General</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Roster Semanal</a>
+                    <a class="nav-link" href="roster_sem.php">Roster Semanal</a>
                   </li>
               </div>
             </div>
