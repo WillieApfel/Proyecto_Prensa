@@ -1,5 +1,6 @@
 <?php
-include 'Plantilla_Prensa/src/demo_1/header.php';
+include ('connect.php');
+include ('Plantilla_Prensa/src/demo_1/header.php');
 mysqli_set_charset($connect, "utf8");
 
 function roster_view(){
@@ -117,10 +118,6 @@ function select_lvbp_updates(){
 
      echo '<option value="'.$row['fecha'].'">'.custom_dateformat($row['fecha'],2).'</option>';
     }
-
-
-
-
 
 
 }

@@ -1,8 +1,6 @@
 <?php
-include 'connect.php';
-include '..\..\..\functions_forms.php';
+include ('connect.php');
 mysqli_set_charset($connect, "utf8");
-
 ?>
 <html lang="es">
   <head>

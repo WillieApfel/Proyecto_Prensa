@@ -1,7 +1,7 @@
 <?php
 $server="localhost";
 $user="root";
-$password="*/proyecto/*boleteria,";
+$password="";
 $database="prensa_magallanes";
 
 

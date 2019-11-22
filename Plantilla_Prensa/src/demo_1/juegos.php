@@ -1,7 +1,8 @@
 
 
 <?php include '../../../functions_forms.php';
-require_once "richtexteditorphp/richtexteditor/include_rte.php";
+include ('header.php');
+require_once 'richtexteditorphp/richtexteditor/include_rte.php';
 ?>
 <?php   
 	// Create Editor instance and use Text property to load content into the RTE.  
