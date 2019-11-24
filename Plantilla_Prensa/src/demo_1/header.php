@@ -1,6 +1,9 @@
 <?php
 include ('connect.php');
+include '..\..\..\functions_forms.php';
+include "pages/Login/Codigo/headersession.php";
 mysqli_set_charset($connect, "utf8");
+
 ?>
 <html lang="es">
   <head>
@@ -52,13 +55,7 @@ mysqli_set_charset($connect, "utf8");
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                  <!-- <img class="img-xs rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image"> </a>  --> Cuenta 
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                <div class="dropdown-header text-center">
-                 <!-- <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">  -->
-                  <p class="mb-1 mt-3 font-weight-semibold">Nombre</p>
-                  <p class="font-weight-light text-muted mb-0">Correo</p>
-                </div>
-                <a class="dropdown-item">Mi perfil <span class="badge badge-pill badge-danger"></span><i class="dropdown-item-icon ti-dashboard"></i></a>
-                <a class="dropdown-item">Cerrar sesión<i class="dropdown-item-icon ti-power-off"></i></a>
+                <a href="sesion_logout.php" class="dropdown-item">Cerrar sesión<i class="dropdown-item-icon ti-power-off"></i></a>
               </div>
             </li>
           </ul>
@@ -91,7 +88,10 @@ mysqli_set_charset($connect, "utf8");
               <div class="collapse" id="ui-basic1">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="juegos.php">Generar</a>
+                    <a class="nav-link" href="juegos.php">Redactar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="reportes.php">Listado</a>
                   </li>
                 </ul>
               </div>

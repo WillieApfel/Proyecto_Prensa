@@ -407,8 +407,8 @@ function encabezado(){
     $sql2 = mysqli_query($connect, 'SELECT * FROM redaccion r WHERE r.fecha="'.$fecha.'"');
     $row2=mysqli_fetch_array($sql2);
 
-    echo "<h3>".$mag_nombre." (".$row_mag_win['count']."G - ".$row_mag_lose['count']."P) Vs. ".$otro_nombre.
-    " (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P)</h3>";
+    echo "<h3>".$otro_nombre." (".$row_otro_win['count']."G - ".$row_otro_lose['count']."P) Vs. ".$mag_nombre.
+    " (".$row_mag_win['count']."G - ".$row_mag_lose['count']."P)</h3>";
     echo"<p>".$row2['abridores']."</p>";
     echo "<p>FECHA: ".encabezado_dateformat($fecha).". HORA: ".timeformat($row_partido['hora']).". LUGAR: Estadio ".
     $row_partido['estadio'].".</p>";
@@ -419,7 +419,7 @@ function redact(){
     global $connect, $fecha;
     $sql = mysqli_query($connect, 'SELECT * FROM redaccion r WHERE r.fecha="'.$fecha.'"');
     $row=mysqli_fetch_array($sql);
-    echo $row['redaccion'];
+    echo "<p>".$row['redaccion']."</p>";
 }
 function timeformat($time){
     $array= explode(':',$time);
@@ -481,7 +481,7 @@ function pagina3(){
     global $connect, $fecha;
     $sql=mysqli_query($connect, "SELECT r.duelo FROM redaccion r WHERE r.fecha='$fecha'");
     $row=mysqli_fetch_array($sql);
-    echo $row['duelo'];
+    echo "<p>".$row['duelo']."</p>";
 }
 
 ?>

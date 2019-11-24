@@ -10,8 +10,8 @@ include 'functions_pdf.php';
     <style type="text/css">
         /* Generales */
         @font-face {
-            font-family: "Roboto";
-            src: url("fonts/Roboto-Regular.ttf");
+            font-family: "Militech";
+            src: url("fonts/militech_r.ttf");
         }
         html {
             box-sizing: border-box;
@@ -20,8 +20,11 @@ include 'functions_pdf.php';
             box-sizing: inherit;
         }
         body {
-            font-family: 'Roboto';
+            font-family: "Militech";
             margin: 0;
+        }
+        body * {
+            font-family: "Militech";
         }
         .mayus {
             text-transform: uppercase;
@@ -122,7 +125,7 @@ include 'functions_pdf.php';
             padding: 0 24px;
         }
         #reporte p {
-            font-size: 11px;
+            font-size: 10px;
         }
         #varios {
             position: absolute;

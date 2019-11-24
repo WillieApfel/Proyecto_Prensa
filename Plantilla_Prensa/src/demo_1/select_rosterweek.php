@@ -14,7 +14,7 @@ function custom_dateformat($item,$referencia){
     return $retorno;
 }
 
-    $sql = mysqli_query($connect, "SELECT * FROM roster_week rw INNER JOIN roster r ON rw.jugador=r.id 
+    $sql = mysqli_query($connect, "SELECT r.*,rw.id AS 'id_sem' FROM roster_week rw INNER JOIN roster r ON rw.jugador=r.id 
         WHERE rw.semana_inicio='".$_GET['f']."'");
     while($row=mysqli_fetch_array($sql)) { 
         if($row['pos_sec']==""){
@@ -22,6 +22,7 @@ function custom_dateformat($item,$referencia){
         }else{
             $posicion = $row['posicion']."/".$row['pos_sec'];
         }
+         $boton='<a href="delete.php?id='. $row['id_sem'] .'"><button class="btn btn-light">eliminar</button></a>';
         echo"<tr>
                 <td>".$row['nro']."</td>
                 <td>".$row['nombre']." ".$row['apellido']."</td>
@@ -30,8 +31,8 @@ function custom_dateformat($item,$referencia){
                 <td>".$row['h_feet']."'".$row['h_inches'].'"/'.$row['w_lbs']."</td>
                 <td>".custom_dateformat($row['birthday'],2)."</td>
                 <td>".$row['birthplace']."</td>
-                <td>".$row['org']."</td>
-                <td>".$row['liga']."</td>
+                <td>".$boton."</td>
+                
             </tr>";
     }
 ?>

@@ -25,7 +25,7 @@ include '../../../functions_forms.php';
                 <form name="fsem">
                     <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-secondary" onclick="moverIzquierda()"><i class="mdi mdi-chevron-left"></i></button>
-                        <select name="semana" class="btn btn-secondary dropdown-toggle" type="button" onchange="select_rosterweek(this)">
+                        <select name="semana" id="semana" class="btn btn-secondary dropdown-toggle" type="button" onchange="select_rosterweek(this)">
                             <option value="1">- - Selecionar- -</option>
                             <?php select_week(); ?>
                         </select>
@@ -63,8 +63,8 @@ include '../../../functions_forms.php';
                                         <th>H/W</th>   
                                         <th>Birthday</th>
                                         <th>Birthplace</th>
-                                        <th>Organización</th>
-                                        <th>Liga</th>
+                                        <th>Acción</th>
+
                                     </tr>
                                 </thead>
                                 <tbody id="roster_week">
@@ -86,12 +86,14 @@ include '../../../functions_forms.php';
             </div>
             <!--Body del Modal con formulario-->
             <form action="" mehtod="POST" name="form1" class="form-inline">
-                <input type="text" name="busqueda" id="pc" class="form-control" placeholder="Busqueda" onkeyup="loadB();" style="width: 60%;">
-                <select name="filtrar" id="sc" style="width: 150px;" class="form-control">
+                <input type="text" name="busqueda" id="search" class="form-control" placeholder="Busqueda" onkeyup="loadB();" style="width: 60%;">
+                <select hidden name="filtrar" id="sc" style="width: 150px;" class="form-control">
 	                            <option value="nombre"><span>nombre</span></option>
 	                            <option value="apellido"><span>apellido</span></option>
 	                          </select>
+                <!-- BOTON BUSCAR
                 <input style="margin-left: 70px; background-color:#0000FF; border-color:#0000FF" name="submit" type="submit" class="btn btn-success" aria-hidden="true" name="buscar" value="Buscar">
+                -->
             </form>    
                 
                 <div class="panel-body">
@@ -100,8 +102,8 @@ include '../../../functions_forms.php';
                       <thead>
                         <thead>
                             <tr>
-                                <th>Nro</th>
                                 <th>Nombre</th>
+                                <th>Apellido</th>
                                 <th>Accion</th>
                             </tr>
                         </thead>
@@ -111,18 +113,25 @@ include '../../../functions_forms.php';
                                 $buscar = $_POST["palabra"];
                                 $param = $_POST["filtrar"];
             
-                                if($param==''){
-                                $sql="SELECT * FROM `roster_equipo`";
-                                }else{
-                                $sql="SELECT * FROM `roster_equipo` WHERE  $param LIKE '%".$buscar."%'";
-                                }
+                             
+                                $sql="SELECT * FROM `roster` WHERE nombre LIKE '%".$buscar."%' OR apellido LIKE '%".$buscar."%'";
+
+                                $result = mysqli_query($connect, $sql);
+                                
+                            
+                                
                             }else{
-                                $sql="SELECT * FROM `roster_equipo`";
+                                $sql="SELECT * FROM `roster` WHERE `roster`.`id`=0";
                             }
 
-                            $result = mysqli_query($connect, $sql);
+                            if($buscar == ""){
+                                $sql= $result = mysqli_query($connect, $sql);
+                                
+                            }
 
+                            
                             if (mysqli_num_rows($result) > 0) {
+
                                 // output data of each row
                                 while($row = mysqli_fetch_assoc($result)) {
 
@@ -140,7 +149,6 @@ include '../../../functions_forms.php';
                             } else {
                                 echo "<td>0 results</td>";
                             }
-        
                             
 
                         ?>
@@ -171,7 +179,8 @@ include '../../../functions_forms.php';
 <script>
 
 function loadB(){
-    var str=document.getElementById('pc').value;
+    var str=document.getElementById('search').value;
+    var str3=document.getElementById('semana').value;
     var str2=document.getElementById('sc').value;
     var xmlhttp;
     if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -186,6 +195,18 @@ function loadB(){
     }
     xmlhttp.open("POST","tabla.php",true);
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xmlhttp.send("q="+str+"&y="+str2);
+    xmlhttp.send("q="+str+"&y="+str2+"&f="+str3);
+    console.log("f="+str3);
     }
+
+function modal_roster(){
+    var str=document.getElementById('search').value;
+    var str1="search.php";
+    var str2=str1.concat(str);
+    var obj= new XMLHttpRequest();
+    obj.open('POST', 'search_roster.php', true);
+    obj.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    obj.send(search=str);
+}
+
 </script>

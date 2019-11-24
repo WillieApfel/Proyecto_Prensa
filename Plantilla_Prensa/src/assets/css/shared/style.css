@@ -68,9 +68,10 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-image:  url("https://i.pinimg.com/originals/4d/2d/eb/4d2deba29e0fb4f8c72a365d95edd1bf.jpg");  
-    background-size: 100%;
-}; 
+  background-image:  url("estadiojosebp.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%; 
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -486,7 +487,6 @@ pre {
   margin-left: auto; }
 
 .row {
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

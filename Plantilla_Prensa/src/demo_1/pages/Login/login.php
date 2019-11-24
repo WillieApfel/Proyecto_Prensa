@@ -28,7 +28,13 @@
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
-                <form action="Codigo/user_sesion.php" method="POST">
+                <form action="Codigo/sesion.php" method="POST">
+                        <?php
+                    if(isset($_GET["status"])){
+                        $id = $_GET["status"];
+                        $message = $_GET["msg"];
+                        echo"<br> <div id='$id' style='margin-left:-1%; margin-top:8%; text-align:center; color:red;'>$message</div>";
+                    }?>
                   <div class="form-group">
                   <label class="label">Usuario</label>
                     <div class="input-group">

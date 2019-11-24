@@ -1,16 +1,17 @@
 <?php
 	include"connect.php";
-
+	mysqli_set_charset($connect, "utf8");
 	$buscar = $_POST["q"];
-	$param = $_POST["y"];
+	$sem = $_POST["f"];
+
 						
-	$sql="SELECT * FROM `roster_equipo` WHERE  $param LIKE '%".$buscar."%'";	
+	$sql="SELECT * FROM `roster_equipo` WHERE nombre LIKE '%".$buscar."%' OR apellido LIKE '%".$buscar."%'";	
 
 	$result = mysqli_query($connect, $sql);
 
 	while($row = mysqli_fetch_assoc($result)){ 
 
-    	$modificar='<a href="edit.php?id=' . $row['id'] . '"><input type="button" class="btn btn-round btn-warning" value="editar"/></a>';
+    	$modificar='<a href="add_to.php?id='.$row['id'].'&f_ini='.$sem.'"><input type="button" class="btn btn-round btn-warning" value="agregar"/></a>';
 	   echo"   <tr>
 	              <td class='col-xs-2' id='acc'>".$row['nombre']."</td>
 	              <td class='col-xs-2' id='acc'>".$row['apellido']."</td>

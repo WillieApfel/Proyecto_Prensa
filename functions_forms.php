@@ -1,6 +1,5 @@
 <?php
-include ('connect.php');
-include ('Plantilla_Prensa/src/demo_1/header.php');
+include 'Plantilla_Prensa/src/demo_1/header.php';
 mysqli_set_charset($connect, "utf8");
 
 function roster_view(){
@@ -42,6 +41,13 @@ function roster_view(){
 
         }   
     }
+}
+
+function edit_redact(){
+    global $connect, $fecha;
+    $sql=mysqli_query($connect, "SELECT * FROM redaccion WHERE redaccion.fecha='".$fecha."'");
+    $row=mysqli_fetch_assoc($sql);
+    return array($row['redaccion'],$row['abridores'],$row['duelo']);
 }
 
 function select_juegos(){
@@ -120,6 +126,10 @@ function select_lvbp_updates(){
     }
 
 
+
+
+
+
 }
    
 function show_games(){
@@ -158,16 +168,14 @@ function select_week(){
     global $connect;
     $sql = mysqli_query($connect, "SELECT rw.semana_inicio, rw.semana_fin FROM roster_week rw GROUP BY rw.semana_inicio");
     while ($row = mysqli_fetch_array($sql)){
-        echo '<option value="'.$row['semana_inicio'].'">'.custom_dateformat($row['semana_inicio'], 2)." - ".custom_dateformat($row['semana_fin'], 2).'</option>';
+        echo '<option value="'.$row['semana_inicio'].'a'.$row['semana_fin'].'">'.custom_dateformat($row['semana_inicio'], 2)." - ".custom_dateformat($row['semana_fin'], 2).'</option>';
     }
 }
 
 function show_week($fecha){
     global $connect;
     $sql = mysqli_query($connect, "SELECT rw.semana_inicio, rw.semana_fin FROM roster_week rw GROUP BY rw.semana_inicio");
-    while ($row = mysqli_fetch_array($sql)){
-        echo '<option value="'.$row['semana_inicio'].'">'.custom_dateformat($row['semana_inicio'], 2)." - ".custom_dateformat($row['semana_fin'], 2).'</option>';
-    }
+   
     while($row=mysqli_fetch_array($sql)) { 
         echo"<tr>
                 <td>".$row['nro']."</td>
@@ -195,4 +203,37 @@ function search_player() {
         </tr>';
     }
 }
+
+function reportes_view(){
+    global $connect, $fecha, $row_temp;  
+    $sql= mysqli_query($connect,"SELECT c.*, cm.nro_juego, el.nombrec AS 'loc', ev.nombrec AS 'vis' 
+        FROM calendario_liga c INNER JOIN calendario_mag cm ON c.id = cm.id INNER JOIN equipos el ON c.home_club=el.id 
+        INNER JOIN equipos ev ON c.visitante=ev.id WHERE c.fecha IN (SELECT redaccion.fecha FROM redaccion) 
+        ORDER BY cm.nro_juego");
+
+    while($row=mysqli_fetch_array($sql)){
+        if($row['home_club']==1){
+            $rival=$row['vis'];
+        }else{
+            $rival=$row['loc'];
+        }
+        echo"<tr>
+                    <td>".$row['nro_juego']."</td>
+                    <td>".custom_dateformat($row['fecha'],2)."</td>
+                    <td>".$rival."</td>
+                    <td><a href='../../../genera_prueba.php?f=".$row['fecha']."' class='btn btn-dark btn-sm'>Mostrar PDF</a></td>
+                    <td><a href='edit_reporte.php?f=".$row['fecha']."' class='btn btn-secondary btn-sm'>Editar</a></td>
+                </tr>";
+    }
+}
+
+function umpire(){
+
+    global $connect, $fecha;
+    $sql = mysqli_query($connect,"SELECT * FROM arbitraje WHERE fecha='$fecha'");
+
+    $row=mysqli_fetch_array($sql);
+    
+    return array($row['principal'],$row['primera'],$row['segunda'],$row['tercera'],$row['rv']);
+} 
 ?>

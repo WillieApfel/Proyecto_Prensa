@@ -1,6 +1,8 @@
 <?php include '../../../functions_forms.php';
-
 ?>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
   <div class="main-panel">
           <div class="content-wrapper">
             <!-- Page Title Header Starts-->
@@ -23,6 +25,12 @@
                 </div>
               </div>
             </div> 
+
+            <H1 style="font-family: 'Roboto', sans-serif;" > Bienvenid@ <?php echo$_SESSION['nombre'] ?> </H1> 
+
+
+
+
 <!-- partial -->
  
 

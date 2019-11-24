@@ -21,7 +21,7 @@ include '../../../functions_forms.php';
     <div>
     <form action="insert_encuentro.php" method="POST">
         <label for="titulo"  style="margin-left: 15px; width: 250px;  position: absolute">Visitante: </label>
-        <select name="local" class="form-control" style="margin-left: 90px; width: 250px" required>
+        <select name="visit" class="form-control" style="margin-left: 90px; width: 250px" required>
                     <option value="0">--Seleccionar--</option>
                     <option value="1">Navengantes de Magallanes</option>
                     <option value="2">Águilas del Zulia</option>
@@ -33,7 +33,7 @@ include '../../../functions_forms.php';
                     <option value="8">Tigres de Aragua</option>
                 </select>
         <label for="titulo"  style="margin-left: 50px; width: 250px;  position: absolute">Home Club:</label>
-        <select name="visit" class="form-control" style="margin-left: 150px; width: 250px" required>
+        <select name="local" class="form-control" style="margin-left: 150px; width: 250px" required>
                     <option value="0">--Seleccionar--</option>
                     <option value="1">Navengantes de Magallanes</option>
                     <option value="2">Águilas del Zulia</option>
