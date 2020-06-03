@@ -9,7 +9,7 @@ session_start();
     $_SESSION['game_date'] ;
       
 session_destroy();
-header("location: pages/Login/login.php");
+header("location: index.php");
 
 
 ?>
